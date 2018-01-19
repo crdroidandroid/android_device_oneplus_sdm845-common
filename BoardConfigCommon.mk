@@ -18,6 +18,9 @@ BOARD_VENDOR := oneplus
 
 COMMON_PATH := device/oneplus/sdm845-common
 
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
+
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
 # Architecture
