@@ -23,7 +23,7 @@
 #include <android-base/strings.h>
 #include <android-base/stringprintf.h>
 
-#include <utils/Log.h>
+#include <log/log.h>
 #include <utils/Trace.h>
 
 #include "Power.h"
