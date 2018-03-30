@@ -9,7 +9,7 @@ ro.af.client_heap_size_kbyte=7168
 
 # LMKD
 ro.lmk.low=1001
-ro.lmk.medium=0
+ro.lmk.medium=800
 ro.lmk.critical=0
 ro.lmk.critical_upgrade=false
 ro.lmk.upgrade_pressure=100
