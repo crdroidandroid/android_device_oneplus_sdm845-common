@@ -18,3 +18,7 @@
 # Power HAL
 /system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
 /system/lib/hw/power\.qcom\.so      u:object_r:vendor_file:s0
+
+# Livedisplay
+/system/bin/hw/vendor\.lineage\.livedisplay@1\.0-service-sdm_system u:object_r:hal_livedisplay_default_exec:s0
+/data/display(/.*)?                                                 u:object_r:display_misc_file:s0
