@@ -58,10 +58,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Camera
-PRODUCT_PACKAGES += \
-    Snap
-
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
@@ -101,6 +97,16 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
+
+# Prebuilts
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusGallery \
+    OnePlusCameraService
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/addon.d/51-oneplus-camera.sh:system/addon.d/51-oneplus-camera.sh  \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml
 
 # Telephony
 PRODUCT_PACKAGES += \
