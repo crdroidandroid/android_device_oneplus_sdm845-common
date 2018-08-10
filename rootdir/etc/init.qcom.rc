@@ -36,6 +36,9 @@ on boot
     chown system system /proc/touchpanel/up_arrow_enable
     chown system system /proc/touchpanel/up_swipe_enable
 
+    write /data/misc/camera/client_package_name "com.oneplus.camera"
+    chmod 0444 /data/misc/camera/client_package_name
+
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/hbm
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/main_display/display_mode
