@@ -52,16 +52,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.bar_fake_gcell=1 \
-    persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.ignore_dom_time=10 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.ignore_dom_time=10 \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.RATE_ADAPT_ENABLE=1 \
+    persist.vendor.radio.ROTATION_ENABLE=1 \
+    persist.vendor.radio.VT_ENABLE=1 \
+    persist.vendor.radio.VT_HYBRID_ENABLE=1 \
+    persist.vendor.radio.is_wps_enabled=true \
+    persist.vendor.radio.videopause.mode=1 \
+    persist.vendor.radio.sap_silent_pin=1 \
+    persist.vendor.radio.always_send_plmn=true \
+    persist.vendor.rcs.supported=1 \
     ro.telephony.default_network=22,22
-
-# Touchscreen
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qti.inputopts.enable=true \
-    persist.vendor.qti.inputopts.movetouchslop=0.6
 
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -71,3 +80,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.ssr.restart_level=ALL_ENABLE
+
+# VoLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.calls.on.ims=1
