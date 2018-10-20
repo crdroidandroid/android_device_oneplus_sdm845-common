@@ -1,0 +1,114 @@
+# SPECTRUM KERNEL MANAGER
+# Ramdisk file for profile based kernel management
+# Implimentation inspired by Franco's fku profiles
+
+# Initialization
+on property:sys.boot_completed=1
+   # Set default profile on first boot
+   exec u:r:init:s0 -- /init.spectrum.sh
+   exec u:r:su:s0 root root -- /init.spectrum.sh
+   exec u:r:magisk:s0 root root -- /init.spectrum.sh
+   exec u:r:supersu:s0 root root -- /init.spectrum.sh
+   # Enable Spectrum support
+   setprop spectrum.support 1
+   # Add kernel name
+   setprop persist.spectrum.kernel SmurfKernel
+
+# Power saving profile
+on property:fku.perf.profile=0
+	write /dev/stune/top-app/schedtune.sched_boost 5
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1766400
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2169600
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 500
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 825600
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 748800
+	write /sys/module/workqueue/paramaters/power_efficient Y
+	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 9
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1_2 6
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift2 8
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load1 45
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load2 75
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/rate_limit_us 0
+	write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1 10
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1_2 7
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift2 9
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load1 45
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load2 75
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/rate_limit_us 0
+
+# Balance (FK defaults)
+on property:fku.perf.profile=1
+	write /dev/stune/top-app/schedtune.sched_boost 7
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1766400
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2400000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 7
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 750
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 979200
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
+	write /sys/module/workqueue/paramaters/power_efficient Y
+	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 8
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1_2 5
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift2 7
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load1 40
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load2 75
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/rate_limit_us 0
+	write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1 9
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1_2 5
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift2  7
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load1 40
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load2 75
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/rate_limit_us 0
+
+# Performance
+on property:fku.perf.profile=2
+	write /dev/stune/top-app/schedtune.sched_boost 10
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1766400
+	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2803200
+	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 10
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 1000
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1056000
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 979200
+	write /sys/module/workqueue/paramaters/power_efficient N
+	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 7
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1_2 4
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift2 6
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load1 25
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/target_load2 75
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/rate_limit_us 0
+	write /sys/devices/system/cpu/cpufreq/policy4/scaling_governor smurfutil_flex
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1 6
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift1_2 4
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/bit_shift2 6
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load1 25
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/target_load2 80
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/silver_suspend_max_freq 825600
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/gold_suspend_max_freq 902400
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/hispeed_freq 0
+	write /sys/devices/system/cpu/cpu4/cpufreq/smurfutil_flex/rate_limit_us 0

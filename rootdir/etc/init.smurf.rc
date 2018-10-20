@@ -1,0 +1,37 @@
+import /init.performance_profiles.rc
+
+on property:sys.boot_completed=1
+
+# allows Kernel Manager for Franco Kernel  to know this feature is supported
+    setprop fku.profiles 1
+
+write /sys/block/dm-0/queue/scheduler cfq
+write /sys/block/dm-1/queue/scheduler cfq
+write /sys/block/sda/queue/scheduler cfq
+write /sys/block/sde/queue/scheduler cfq
+write /sys/block/dm-0/queue/read_ahead_kb 512
+write /sys/block/dm-1/queue/read_ahead_kb 512
+write /sys/block/sda/queue/read_ahead_kb 512
+write /sys/block/sde/queue/read_ahead_kb 512
+write /sys/block/dm-0/queue/nr_requests 128
+write /sys/block/dm-1/queue/nr_requests 128
+write /sys/block/sda/queue/nr_requests 128
+write /sys/block/sde/queue/nr_requests 128
+write /sys/block/dm-0/queue/iostats 1
+write /sys/block/dm-1/queue/iostats 1
+write /sys/block/sda/queue/iostats 1
+write /sys/block/sde/queue/iostats 1
+
+write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
+write /sys/module/cpu_input_boost/parameters/remove_input_boost_freq_lp 300000
+write /sys/kernel/gpu/gpu_min_clock 180
+
+exec u:r:init:s0 -- /init.special_power.sh
+exec u:r:su:s0 root root -- /init.special_power.sh
+exec u:r:magisk:s0 root root -- /init.special_power.sh
+exec u:r:supersu:s0 root root -- /init.special_power.sh
+   
+exec u:r:init:s0 -- /init.smurf.post_boot.sh
+exec u:r:su:s0 root root -- /init.smurf.post_boot.sh
+exec u:r:magisk:s0 root root -- /init.smurf.post_boot.sh
+exec u:r:supersu:s0 root root -- /init.smurf.post_boot.sh

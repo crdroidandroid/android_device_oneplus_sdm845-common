@@ -60,8 +60,19 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    init.performance_profiles.rc \
     init.qcom.rc \
-    init.recovery.qcom.rc
+    init.qcom.test.rc \
+    init.recovery.qcom.rc \
+    init.smurf.rc \
+    init.spectrum.rc \
+    init.smurf.post_boot.rc
+
+# Common kernel scripts
+PRODUCT_PACKAGES += \
+    init.smurf.post_boot.sh \
+    init.special_power.sh \
+    init.spectrum.sh
 
 # Display
 PRODUCT_PACKAGES += \
