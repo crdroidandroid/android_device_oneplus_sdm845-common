@@ -1,6 +1,8 @@
 import /init.performance_profiles.rc
 
 on property:sys.boot_completed=1
+write /sys/kernel/gpu/gpu_min_clock 180
+write /sys/module/cpu_input_boost/parameters/remove_input_boost_freq_lp 300000
 
 # allows Kernel Manager for Franco Kernel  to know this feature is supported
     setprop fku.profiles 1
@@ -23,8 +25,6 @@ write /sys/block/sda/queue/iostats 1
 write /sys/block/sde/queue/iostats 1
 
 write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 0
-write /sys/module/cpu_input_boost/parameters/remove_input_boost_freq_lp 300000
-write /sys/kernel/gpu/gpu_min_clock 180
 
 exec u:r:init:s0 -- /init.special_power.sh
 exec u:r:su:s0 root root -- /init.special_power.sh

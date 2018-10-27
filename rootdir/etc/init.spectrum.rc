@@ -23,10 +23,10 @@ on property:persist.spectrum.profile=0
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2400000
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
-	write /dev/stune/top-app/schedtune.sched_boost 7
-	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 7
-	write /sys/module/cpu_input_boost/parameters/input_boost_duration 750
-	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 979200
+	write /dev/stune/top-app/schedtune.sched_boost 5
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 902400
 	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
 	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
 	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 8
@@ -56,10 +56,10 @@ on property:persist.spectrum.profile=1
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2803200
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
-	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 10
-	write /sys/module/cpu_input_boost/parameters/input_boost_duration 1000
-	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1056000
-	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 979200
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 15
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 902400
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 902400
 	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
 	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 7
 	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1_2 4
@@ -83,13 +83,13 @@ on property:persist.spectrum.profile=1
 
 # Battery
 on property:persist.spectrum.profile=2
-	write /dev/stune/top-app/schedtune.sched_boost 5
+	write /dev/stune/top-app/schedtune.sched_boost 0
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1766400
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2169600
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
-	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 5
-	write /sys/module/cpu_input_boost/parameters/input_boost_duration 500
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 0
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
 	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 825600
 	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 748800
 	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
@@ -115,15 +115,15 @@ on property:persist.spectrum.profile=2
 
 # Gaming
 on property:persist.spectrum.profile=3
-	write /dev/stune/top-app/schedtune.sched_boost 12
+	write /dev/stune/top-app/schedtune.sched_boost 15
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1766400
 	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2803200
 	write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 825600
-	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 12
-	write /sys/module/cpu_input_boost/parameters/input_boost_duration 1250
-	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 1132800
-	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 1056000
+	write /sys/module/cpu_input_boost/parameters/dynamic_stune_boost 20
+	write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 979200
+	write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 979200
 	write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor smurfutil_flex
 	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1 7
 	write /sys/devices/system/cpu/cpu0/cpufreq/smurfutil_flex/bit_shift1_2 4
