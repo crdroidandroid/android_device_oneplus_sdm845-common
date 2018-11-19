@@ -76,13 +76,12 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-# Dex
+# Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
   endif
 endif
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
 
 # Display
 TARGET_USES_HWC2 := true
