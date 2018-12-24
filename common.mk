@@ -129,3 +129,11 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Wi-Fi Display
+PRODUCT_PACKAGES += \
+    libnl \
+    vendor.display.config@1.0
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
