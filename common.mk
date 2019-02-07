@@ -63,10 +63,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.recovery.qcom.rc
 
-# Camera
-PRODUCT_PACKAGES += \
-    CameraPackage
-
 # Display
 PRODUCT_PACKAGES += \
     libvulkan
