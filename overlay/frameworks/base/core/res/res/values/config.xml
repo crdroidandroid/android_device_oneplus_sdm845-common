@@ -353,6 +353,9 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+    <!-- Boolean indicating if current platform supports HFP inband ringing -->
+    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+
 <!-- crDroid-specific customizations below -->
 <!--
      Copyright (C) 2016-2021 crDroid Android Project
