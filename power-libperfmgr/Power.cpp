@@ -51,6 +51,12 @@ using ::android::hardware::hidl_vec;
 using ::android::hardware::Return;
 using ::android::hardware::Void;
 
+constexpr char kPowerHalStateProp[] = "vendor.powerhal.state";
+constexpr char kPowerHalAudioProp[] = "vendor.powerhal.audio";
+constexpr char kPowerHalInitProp[] = "vendor.powerhal.init";
+constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
+constexpr char kPowerHalConfigPath[] = "/system/etc/powerhint.json";
+
 static const std::map<enum CameraStreamingMode, std::string> kCamStreamingHint = {
     {CAMERA_STREAMING_OFF, "CAMERA_STREAMING_OFF"},
     {CAMERA_STREAMING, "CAMERA_STREAMING"},
@@ -125,7 +131,7 @@ Return<void> Power::setInteractive(bool /* interactive */)  {
 }
 
 Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
-    if (!isSupportedGovernor() || !mReady) {
+    if (!mReady) {
         return Void();
     }
     ATRACE_INT(android::hardware::power::V1_0::toString(hint).c_str(), data);
@@ -319,20 +325,6 @@ Return<void> Power::getSubsystemLowPowerStats(getSubsystemLowPowerStats_cb _hidl
     return Void();
 }
 
-bool Power::isSupportedGovernor() {
-    std::string buf;
-    if (android::base::ReadFileToString("/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor", &buf)) {
-        buf = android::base::Trim(buf);
-    }
-    // Only support EAS 1.2, legacy EAS
-    if (buf == "schedutil" || buf == "sched") {
-        return true;
-    } else {
-        LOG(ERROR) << "Governor not supported by powerHAL, skipping";
-        return false;
-    }
-}
-
 Return<void> Power::powerHintAsync(PowerHint_1_0 hint, int32_t data) {
     // just call the normal power hint in this oneway function
     return powerHint(hint, data);
@@ -340,7 +332,7 @@ Return<void> Power::powerHintAsync(PowerHint_1_0 hint, int32_t data) {
 
 // Methods from ::android::hardware::power::V1_2::IPower follow.
 Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
-    if (!isSupportedGovernor() || !mReady) {
+    if (!mReady) {
         return Void();
     }
 
@@ -444,7 +436,7 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
 
 // Methods from ::android::hardware::power::V1_3::IPower follow.
 Return<void> Power::powerHintAsync_1_3(PowerHint_1_3 hint, int32_t data) {
-    if (!isSupportedGovernor() || !mReady) {
+    if (!mReady) {
         return Void();
     }
 
