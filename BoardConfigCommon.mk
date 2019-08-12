@@ -95,6 +95,7 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
   endif
 endif
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI
 
 # Display
 TARGET_USES_HWC2 := true
