@@ -6,6 +6,15 @@
 /op2(/.*)?       u:object_r:op2_file:s0
 /op_odm(/.*)?    u:object_r:system_file:s0
 
+# Display Modes
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/SRGB           u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm            u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/night_mode     u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/DCI_P3         u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/adaption_mode  u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/oneplus_mode   u:object_r:sysfs_dm:s0
+
 # HALs
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_fajita    u:object_r:hal_fod_sdm845_exec:s0
