@@ -6,9 +6,6 @@
 /op2(/.*)?       u:object_r:op2_file:s0
 /op_odm(/.*)?    u:object_r:system_file:s0
 
-# Files in sysfs
-/sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
-
 # HALs
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service    u:object_r:hal_light_default_exec:s0
 /system/bin/hw/lineage\.biometrics\.fingerprint\.inscreen@1.0-service\.oneplus_fajita    u:object_r:hal_fod_sdm845_exec:s0
