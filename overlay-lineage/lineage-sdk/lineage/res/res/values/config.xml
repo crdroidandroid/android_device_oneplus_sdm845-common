@@ -25,13 +25,13 @@
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system/priv-app/LineageParts/LineageParts.apk</item>
-        <item>/system/priv-app/KeyHandler/KeyHandler.apk</item>
+        <item>/system/priv-app/DeviceSettings/DeviceSettings.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
-        <item>org.lineageos.settings.device.KeyHandler</item>
+        <item>org.lineageos.settings.device.DeviceSettings.KeyHandler</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.
@@ -116,4 +116,10 @@
 
     <!-- Whether device has a notch -->
     <bool name="config_haveNotch">true</bool>
+
+    <!-- Indicate available ColorDisplayController.COLOR_MODE_xxx. -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item> <!-- NATURAL -->
+        <item>1</item> <!-- BOOSTED -->
+    </integer-array>
 </resources>
