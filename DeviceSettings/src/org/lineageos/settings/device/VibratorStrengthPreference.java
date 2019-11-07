@@ -20,17 +20,20 @@ package org.lineageos.settings.device;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.ContentObserver;
+import android.os.Bundle;
+import android.os.Vibrator;
+import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceViewHolder;
-import android.database.ContentObserver;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Button;
-import android.os.Bundle;
-import android.util.Log;
-import android.os.Vibrator;
+
+import org.lineageos.settings.device.FileUtils;
 
 public class VibratorStrengthPreference extends Preference implements
         SeekBar.OnSeekBarChangeListener {
@@ -43,6 +46,8 @@ public class VibratorStrengthPreference extends Preference implements
 
     private static final String FILE_LEVEL = "/sys/class/leds/vibrator/vmax_mv_user";
     private static final long testVibrationPattern[] = {0,250};
+    public static final String SETTINGS_KEY = DeviceSettings.KEY_SETTINGS_PREFIX + DeviceSettings.KEY_VIBSTRENGTH;
+    public static final String DEFAULT = "3";
 
     public VibratorStrengthPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -68,27 +73,29 @@ public class VibratorStrengthPreference extends Preference implements
     }
 
     public static boolean isSupported() {
-        return Utils.fileWritable(FILE_LEVEL);
+        return FileUtils.fileWritable(FILE_LEVEL);
     }
 
 	public static String getValue(Context context) {
-		return Utils.getFileValue(FILE_LEVEL, "2088");
+        String val = FileUtils.getFileValue(FILE_LEVEL, DEFAULT);
+        return val;
 	}
 
 	private void setValue(String newValue, boolean withFeedback) {
-	    Utils.writeValue(FILE_LEVEL, newValue);
-        SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-        editor.putString(DeviceSettings.KEY_VIBSTRENGTH, newValue);
-        editor.commit();
+	    FileUtils.writeValue(FILE_LEVEL, newValue);
+        Settings.System.putString(getContext().getContentResolver(), SETTINGS_KEY, newValue);
 	}
 
     public static void restore(Context context) {
         if (!isSupported()) {
             return;
         }
+        String storedValue = Settings.System.getString(context.getContentResolver(), SETTINGS_KEY);
+        if (storedValue == null) {
+            storedValue = DEFAULT;
+        }
 
-        String storedValue = PreferenceManager.getDefaultSharedPreferences(context).getString(DeviceSettings.KEY_VIBSTRENGTH, "2088");
-        Utils.writeValue(FILE_LEVEL, storedValue);
+        FileUtils.writeValue(FILE_LEVEL, storedValue);
     }
 
     public void onProgressChanged(SeekBar seekBar, int progress,

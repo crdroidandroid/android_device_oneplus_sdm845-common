@@ -25,6 +25,8 @@ import androidx.preference.PreferenceManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 
+import org.lineageos.settings.device.DeviceSettings;
+
 public class Startup extends BroadcastReceiver {
 
     @Override
