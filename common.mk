@@ -144,10 +144,6 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64
 
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom:64
-
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
@@ -189,6 +185,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+#QTI performance
+PRODUCT_BOOT_JARS += \
+    QPerformance \
+    UxPerformance
 
 # WiFi Display
 PRODUCT_PACKAGES += \
