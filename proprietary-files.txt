@@ -584,7 +584,6 @@ vendor/firmware/ipa_fws.mdt|4dcb71b74fb1c5fb2b1ef449315d2de2cffad9dd
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
 
 # Keymaster
 vendor/lib64/libkeymasterdeviceutils.so
