@@ -102,7 +102,13 @@ public class KeyHandler implements DeviceKeyHandler {
     public KeyEvent handleKeyEvent(KeyEvent event) {
         int scanCode = event.getScanCode();
         String keyCode = Constants.sKeyMap.get(scanCode);
-        int keyCodeValue = Constants.getPreferenceInt(mContext, keyCode);
+        
+        int keyCodeValue = 0;
+        try {
+            keyCodeValue = Constants.getPreferenceInt(mContext, keyCode);
+        } catch (Exception e) {
+             return event;
+        }
 
         if (!hasSetupCompleted()) {
             return event;
