@@ -102,10 +102,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
