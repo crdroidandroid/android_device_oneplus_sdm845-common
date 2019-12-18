@@ -7,3 +7,6 @@ allow system_server hal_cameraHIDL_hwservice:hwservice_manager { find };
 allow system_server hal_cameraHIDL_default:binder { call };
 allow system_server aosp_data_file:dir search;
 allow system_server aosp_data_file:file { read open getattr };
+
+# Smart Charging
+allow system_server sysfs_battery_supply:file { read open getattr };
