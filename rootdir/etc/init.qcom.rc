@@ -1,7 +1,3 @@
-on post-fs
-    mount none /system/lib/modules/wlan.ko /vendor/lib/modules-aging/qca_cld3_wlan.ko bind
-    mount none /system/lib/modules/wlan.ko /vendor/lib/modules/qca_cld3_wlan.ko bind
-
 on boot
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
