@@ -1,0 +1,1 @@
+get_prop(hal_wifi_supplicant, boottime_prop)
