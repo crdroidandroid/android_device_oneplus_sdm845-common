@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2018 The OmniROM Project
+* Copyright (C) 2017 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -24,9 +24,9 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-public class OnePlusModeSwitch implements OnPreferenceChangeListener {
+public class WideModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/oneplus_mode";
+    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_wide_color_mode";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {

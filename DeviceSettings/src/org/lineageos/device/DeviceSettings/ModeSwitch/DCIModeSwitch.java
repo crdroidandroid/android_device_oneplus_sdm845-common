@@ -26,7 +26,7 @@ import androidx.preference.PreferenceManager;
 
 public class DCIModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/DCI_P3";
+    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
