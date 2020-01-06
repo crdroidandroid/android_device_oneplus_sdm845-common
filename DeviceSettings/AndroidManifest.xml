@@ -92,7 +92,7 @@
         </service>
 
         <service
-            android:name="com.aosip.device.DeviceSettings.DCModeTileService"
+            android:name="org.lineageos.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dc_tile"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
