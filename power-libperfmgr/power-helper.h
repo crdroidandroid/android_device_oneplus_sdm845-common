@@ -57,6 +57,10 @@ enum stats_source {
     // MASTER_DISPLAY,
     MASTER_COUNT, // Total master sources
 
+    // Subsystem stats.  (Numbering starts at MASTER_COUNT to preserve
+    // contiguous source numbering.)
+    SUBSYSTEM_WLAN = MASTER_COUNT,
+
     // Don't add any lines after this line
     STATS_SOURCE_COUNT, // Total sources of any kind excluding system states
     SUBSYSTEM_COUNT = STATS_SOURCE_COUNT - MASTER_COUNT,
@@ -78,6 +82,26 @@ enum master_stats {
 
     //Don't add any lines after this line
     MASTER_STATS_COUNT
+};
+
+enum wlan_sleep_states {
+    WLAN_STATE_ACTIVE = 0,
+    WLAN_STATE_DEEP_SLEEP,
+
+    //Don't add any lines after this line
+    WLAN_SLEEP_STATE_COUNT
+};
+
+// Note that stats for both WLAN sleep states are in a single section of the
+// source file, so there's only 1 stats section despite having 2 states
+enum wlan_stats {
+    CUMULATIVE_SLEEP_TIME_MS = 0,
+    CUMULATIVE_TOTAL_ON_TIME_MS,
+    DEEP_SLEEP_ENTER_COUNTER,
+    LAST_DEEP_SLEEP_ENTER_TSTAMP_MS,
+
+    //Don't add any lines after this line
+    WLAN_STATS_COUNT
 };
 
 enum system_sleep_states {
@@ -108,6 +132,7 @@ struct stats_section {
 };
 
 int extract_master_stats(uint64_t *list, size_t list_length);
+int extract_wlan_stats(uint64_t *list, size_t list_length);
 int extract_system_stats(uint64_t *list, size_t list_length);
 void set_feature(feature_t feature, int state);
 
