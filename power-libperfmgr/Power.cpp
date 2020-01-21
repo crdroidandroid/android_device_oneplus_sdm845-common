@@ -111,7 +111,7 @@ Power::Power() :
                             }
 
                             state = android::base::GetProperty(kPowerHalAudioProp, "");
-                            if (state == "AUDIO_LOW_LATENCY") {
+                            if (state == "LOW_LATENCY") {
                                 ALOGI("Initialize with AUDIO_LOW_LATENCY on");
                                 mHintManager->DoHint("AUDIO_LOW_LATENCY");
                             }
@@ -151,9 +151,15 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
             if (data && !mSustainedPerfModeOn) {
                 if (!mVRModeOn) { // Sustained mode only.
                     mHintManager->DoHint("SUSTAINED_PERFORMANCE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "SUSTAINED_PERFORMANCE")) {
+                        ALOGE("%s: could not set powerHAL state property to SUSTAINED_PERFORMANCE", __func__);
+                    }
                 } else { // Sustained + VR mode.
                     mHintManager->EndHint("VR_MODE");
                     mHintManager->DoHint("VR_SUSTAINED_PERFORMANCE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "VR_SUSTAINED_PERFORMANCE")) {
+                        ALOGE("%s: could not set powerHAL state property to VR_SUSTAINED_PERFORMANCE", __func__);
+                    }
                 }
                 mSustainedPerfModeOn = true;
             } else if (!data && mSustainedPerfModeOn) {
@@ -161,6 +167,13 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
                 mHintManager->EndHint("SUSTAINED_PERFORMANCE");
                 if (mVRModeOn) { // Switch back to VR Mode.
                     mHintManager->DoHint("VR_MODE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "VR_MODE")) {
+                        ALOGE("%s: could not set powerHAL state property to VR_MODE", __func__);
+                    }
+                } else {
+                    if (!android::base::SetProperty(kPowerHalStateProp, "")) {
+                        ALOGE("%s: could not clear powerHAL state property", __func__);
+                    }
                 }
                 mSustainedPerfModeOn = false;
             }
@@ -169,9 +182,15 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
             if (data && !mVRModeOn) {
                 if (!mSustainedPerfModeOn) { // VR mode only.
                     mHintManager->DoHint("VR_MODE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "VR_MODE")) {
+                        ALOGE("%s: could not set powerHAL state property to VR_MODE", __func__);
+                    }
                 } else { // Sustained + VR mode.
                     mHintManager->EndHint("SUSTAINED_PERFORMANCE");
                     mHintManager->DoHint("VR_SUSTAINED_PERFORMANCE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "VR_SUSTAINED_PERFORMANCE")) {
+                        ALOGE("%s: could not set powerHAL state property to VR_SUSTAINED_PERFORMANCE", __func__);
+                    }
                 }
                 mVRModeOn = true;
             } else if (!data && mVRModeOn) {
@@ -179,6 +198,13 @@ Return<void> Power::powerHint(PowerHint_1_0 hint, int32_t data) {
                 mHintManager->EndHint("VR_MODE");
                 if (mSustainedPerfModeOn) { // Switch back to sustained Mode.
                     mHintManager->DoHint("SUSTAINED_PERFORMANCE");
+                    if (!android::base::SetProperty(kPowerHalStateProp, "SUSTAINED_PERFORMANCE")) {
+                        ALOGE("%s: could not set powerHAL state property to SUSTAINED_PERFORMANCE", __func__);
+                    }
+                } else {
+                    if (!android::base::SetProperty(kPowerHalStateProp, "")) {
+                        ALOGE("%s: could not clear powerHAL state property", __func__);
+                    }
                 }
                 mVRModeOn = false;
             }
@@ -359,9 +385,15 @@ Return<void> Power::powerHintAsync_1_2(PowerHint_1_2 hint, int32_t data) {
                 // Hint until canceled
                 mHintManager->DoHint("AUDIO_LOW_LATENCY");
                 ALOGD("AUDIO LOW LATENCY ON");
+                if (!android::base::SetProperty(kPowerHalAudioProp, "LOW_LATENCY")) {
+                    ALOGE("%s: could not set powerHAL audio state property to LOW_LATENCY", __func__);
+                }
             } else {
                 mHintManager->EndHint("AUDIO_LOW_LATENCY");
                 ALOGD("AUDIO LOW LATENCY OFF");
+                if (!android::base::SetProperty(kPowerHalAudioProp, "")) {
+                    ALOGE("%s: could not clear powerHAL audio state property", __func__);
+                }
             }
             break;
         case PowerHint_1_2::AUDIO_STREAMING:
@@ -458,9 +490,16 @@ Return<void> Power::powerHintAsync_1_3(PowerHint_1_3 hint, int32_t data) {
         if (data > 0) {
             ATRACE_INT("EXPENSIVE_RENDERING", 1);
             mHintManager->DoHint("EXPENSIVE_RENDERING");
+            if (!android::base::SetProperty(kPowerHalRenderingProp, "EXPENSIVE_RENDERING")) {
+                ALOGE("%s: could not set powerHAL rendering property to EXPENSIVE_RENDERING",
+                      __func__);
+            }
         } else {
             ATRACE_INT("EXPENSIVE_RENDERING", 0);
             mHintManager->EndHint("EXPENSIVE_RENDERING");
+            if (!android::base::SetProperty(kPowerHalRenderingProp, "")) {
+                ALOGE("%s: could not clear powerHAL rendering property", __func__);
+            }
         }
     } else {
         return powerHintAsync_1_2(static_cast<PowerHint_1_2>(hint), data);
