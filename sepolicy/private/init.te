@@ -5,3 +5,6 @@ allow init vendor_configs_file:dir mounton;
 allow init {
     sysfs_graphics
 }:file { open read setattr };
+
+# Allow init to write to otg_switch
+allow init sysfs_usb_supply:file w_file_perms;
