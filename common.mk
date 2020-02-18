@@ -86,10 +86,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GoogleCamera
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/com.google.android.GoogleCamera.xml:system/etc/permissions/com.google.android.GoogleCamera.xml
+    GCam
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -149,6 +146,16 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
+
+# Prebuilts
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusGallery \
+    OnePlusCameraService
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/addon.d/51-oneplus-camera.sh:system/addon.d/51-oneplus-camera.sh  \
+    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
