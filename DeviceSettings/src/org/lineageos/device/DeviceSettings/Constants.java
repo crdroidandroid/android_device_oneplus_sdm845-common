@@ -52,6 +52,10 @@ public class Constants {
     public static final Map<Integer, String> sKeyMap = new HashMap<>();
     public static final Map<String, Integer> sKeyDefaultMap = new HashMap<>();
 
+    public static final String ACTION_UPDATE_SLIDER_POSITION
+            = "org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION";
+    public static final String EXTRA_SLIDER_POSITION = "position";
+
     static {
         sStringKeyPreferenceMap.put(NOTIF_SLIDER_TOP_KEY, NOTIF_SLIDER_TOP_PREF);
         sStringKeyPreferenceMap.put(NOTIF_SLIDER_MIDDLE_KEY, NOTIF_SLIDER_MIDDLE_PREF);
