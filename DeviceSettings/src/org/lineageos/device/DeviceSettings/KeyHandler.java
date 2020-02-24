@@ -38,6 +38,7 @@ import android.os.PowerManager.WakeLock;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.os.Vibrator;
 import android.provider.Settings;
 import android.util.Log;
@@ -158,8 +159,18 @@ public class KeyHandler implements DeviceKeyHandler {
 
         mAudioManager.setRingerModeInternal(sSupportedSliderRingModes.get(keyCodeValue));
         mNotificationManager.setZenMode(sSupportedSliderZenModes.get(keyCodeValue), null, TAG);
+        int position = scanCode == 601 ? 2 : scanCode == 602 ? 1 : 0;
+        sendUpdateBroadcast(position);
         doHapticFeedback();
         return null;
+    }
+
+    private void sendUpdateBroadcast(int position) {
+        Intent intent = new Intent(Constants.ACTION_UPDATE_SLIDER_POSITION);
+        intent.putExtra(Constants.EXTRA_SLIDER_POSITION, position);
+        mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
+        intent.setFlags(Intent.FLAG_RECEIVER_REGISTERED_ONLY);
+        Log.d(TAG, "slider change to positon " + position);
     }
 
     private void doHapticFeedback() {
