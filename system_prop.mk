@@ -24,9 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    camera.disable_zsl_mode=true \
-    persist.camera.privapp.list=com.oneplus.camera \
-    persist.vendor.camera.privapp.list=com.oneplus.camera
+    camera.disable_zsl_mode=true
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \

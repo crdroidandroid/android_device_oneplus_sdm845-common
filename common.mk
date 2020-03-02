@@ -86,7 +86,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCam
+    Snap
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -146,16 +146,6 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.qcom:64
-
-# Prebuilts
-PRODUCT_PACKAGES += \
-    OnePlusCamera \
-    OnePlusGallery \
-    OnePlusCameraService
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/etc/permissions/privapp-permissions-oem.xml:system/etc/permissions/privapp-permissions-oem.xml \
-    $(LOCAL_PATH)/prebuilts/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml:system/etc/sysconfig/hiddenapi-package-whitelist-oneplus.xml
 
 # Recorder
 PRODUCT_PACKAGES += \
