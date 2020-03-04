@@ -8,6 +8,16 @@ product/lib64/com.qualcomm.qti.ant@1.0.so
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
+# Camera
+-framework/vendor.oneplus.camera.CameraHIDL-V1.0-java.jar
+bin/hw/vendor.oneplus.camera.CameraHIDL@1.0-service
+etc/init/vendor.oneplus.camera.CameraHIDL@1.0-service.rc
+lib/vendor.oneplus.camera.CameraHIDL@1.0.so
+lib/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
+lib64/vendor.oneplus.camera.CameraHIDL@1.0.so
+lib64/vendor.oneplus.camera.CameraHIDL@1.0-adapter-helper.so
+vendor/lib64/vendor.oneplus.camera.CameraHIDL@1.0.so
+
 # DASH
 -sbin/dashd;rootfs
 
