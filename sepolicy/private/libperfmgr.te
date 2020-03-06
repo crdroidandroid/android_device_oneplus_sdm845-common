@@ -1,0 +1,20 @@
+type libperfmgr, domain;
+type libperfmgr_exec, exec_type, file_type;
+
+init_daemon_domain(libperfmgr)
+
+allow libperfmgr sysfs_graphics:dir search;
+allow libperfmgr sysfs_graphics:file r_file_perms;
+
+# To do powerhint on nodes defined in powerhint.json
+allow libperfmgr sysfs_devices_system_cpu:file rw_file_perms;
+
+allow libperfmgr proc_touchpanel:dir search;
+allow libperfmgr proc_touchpanel:file rw_file_perms;
+
+allow libperfmgr hidl_base_hwservice:hwservice_manager add;
+binder_call(libperfmgr, hwservicemanager)
+binder_call(libperfmgr, hal_audio)
+
+# To get hwservicemanager state
+get_prop(libperfmgr, hwservicemanager_prop)

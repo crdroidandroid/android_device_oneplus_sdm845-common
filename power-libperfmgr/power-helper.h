@@ -36,9 +36,6 @@ extern "C" {
 
 #include <hardware/power.h>
 
-#define INPUT_EVENT_WAKUP_MODE_OFF 4
-#define INPUT_EVENT_WAKUP_MODE_ON 5
-
 // These values are used as indices in getSubsystemLowPowerStats(), as source IDs
 // in stats_section instances, and (in the case of the _COUNT values) to dimension
 // containers.  The values used as indices need to be contiguous, but others do

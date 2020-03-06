@@ -59,7 +59,7 @@
 #endif
 
 #ifndef TARGET_TAP_TO_WAKE_NODE
-#define TARGET_TAP_TO_WAKE_NODE "/dev/input/event3"
+#define TARGET_TAP_TO_WAKE_NODE "/proc/touchpanel/double_tap_enable"
 #endif
 
 #define LINE_SIZE 128
@@ -102,16 +102,36 @@ struct stats_section system_sections[] = {
     { SYSTEM_STATES, "RPM Mode:cxsd", system_stats_labels, ARRAY_SIZE(system_stats_labels) },
 };
 
+static int sysfs_write(char *path, char *s)
+{
+    char buf[80];
+    int len;
+    int ret = 0;
+    int fd = open(path, O_WRONLY);
+
+    if (fd < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error opening %s: %s\n", path, buf);
+        return -1 ;
+    }
+
+    len = write(fd, s, strlen(s));
+    if (len < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error writing to %s: %s\n", path, buf);
+
+        ret = -1;
+    }
+
+    close(fd);
+
+    return ret;
+}
+
 void set_feature(feature_t feature, int state) {
     switch (feature) {
         case POWER_FEATURE_DOUBLE_TAP_TO_WAKE: {
-            int fd = open(TARGET_TAP_TO_WAKE_NODE, O_RDWR);
-            struct input_event ev;
-            ev.type = EV_SYN;
-            ev.code = SYN_CONFIG;
-            ev.value = state ? INPUT_EVENT_WAKUP_MODE_ON : INPUT_EVENT_WAKUP_MODE_OFF ;
-            write(fd, &ev, sizeof(ev));
-            close(fd);
+            sysfs_write(TARGET_TAP_TO_WAKE_NODE, state ? "1" : "0");
         } break;
         default:
             break;
