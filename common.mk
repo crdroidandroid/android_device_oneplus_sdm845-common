@@ -160,6 +160,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.qcom:64
 
+# Recorder
+PRODUCT_PACKAGES += \
+    OPScreenRecorder
+
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
     RemovePackages
