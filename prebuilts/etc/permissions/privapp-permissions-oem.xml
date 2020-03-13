@@ -7,4 +7,10 @@
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
     </privapp-permissions>
+
+    <privapp-permissions package="org.codeaurora.snapcam"> 
+        <permission name="android.permission.BIND_WALLPAPER"/>
+        <permission name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
+    </privapp-permissions>
 </permissions>
