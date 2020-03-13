@@ -141,6 +141,7 @@ BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+PRODUCT_SOONG_NAMESPACES += device/oneplus/common
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
