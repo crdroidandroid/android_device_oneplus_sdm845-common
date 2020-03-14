@@ -24,6 +24,10 @@ persist.vendor.cne.feature=1
 # DPM
 persist.vendor.dpm.feature=9
 
+# Enable blurs
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
 # fastbootd
 ro.fastbootd.available=true
 
