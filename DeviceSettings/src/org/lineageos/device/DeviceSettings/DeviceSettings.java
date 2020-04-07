@@ -44,11 +44,8 @@ import org.lineageos.device.DeviceSettings.FileUtils;
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
 
-    public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_DC_SWITCH = "dc";
-    public static final String KEY_DCI_SWITCH = "dci";
-    public static final String KEY_WIDE_SWITCH = "wide";
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
     private VibratorStrengthPreference mVibratorStrength;
