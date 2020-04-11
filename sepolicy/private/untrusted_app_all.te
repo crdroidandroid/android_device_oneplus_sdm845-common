@@ -1,1 +1,3 @@
 get_prop(untrusted_app_all, persist_camera_prop)
+
+allow untrusted_app postinstall_mnt_dir:dir getattr;
