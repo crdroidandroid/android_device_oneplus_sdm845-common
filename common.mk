@@ -17,9 +17,6 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sdm845-common/sdm845-common-vendor.mk)
 
@@ -261,6 +258,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/gf_input.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/gf_input.idc \
     $(LOCAL_PATH)/keylayout/gf_input.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gf_input.kl
+
+# Init
+PRODUCT_PACKAGES += \
+    libinit_sdm845
 
 # IPACM
 PRODUCT_PACKAGES += \
