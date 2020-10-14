@@ -1,0 +1,8 @@
+[
+  {
+    "repository"  : "crdroidandroid/android_kernel_oneplus_sdm845",
+    "target_path" : "kernel/oneplus/sdm845",
+    "revision"    : "10.0",
+    "remote"      : "github"
+  }
+]
