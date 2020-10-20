@@ -36,3 +36,5 @@
 #/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user   u:object_r:sysfs_vibrator:s0
 #/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call   u:object_r:sysfs_vibrator:s0
 #/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong u:object_r:sysfs_vibrator:s0
+
+/data/misc/lineage/client_package_name                u:object_r:lineage_data_file:s0
