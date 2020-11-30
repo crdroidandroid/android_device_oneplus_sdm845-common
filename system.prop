@@ -33,6 +33,7 @@ persist.debug.coresight.config=stm-events
 # Display
 debug.sf.enable_hwc_vds=1
 debug.sf.latch_unsignaled=1
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # fastbootd
 ro.fastbootd.available=true
