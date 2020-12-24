@@ -6,3 +6,7 @@ persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0
 
 # Power HAL
 vendor.powerhal.             u:object_r:vendor_power_prop:s0
+
+# WiFi
+vendor.wlan.driver.version      u:object_r:vendor_wifi_version:s0
+vendor.wlan.firmware.version    u:object_r:vendor_wifi_version:s0
