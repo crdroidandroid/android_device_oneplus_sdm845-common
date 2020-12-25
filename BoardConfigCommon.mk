@@ -73,18 +73,12 @@ BOARD_VNDK_VERSION := current
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Audio
 USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Camera
 TARGET_CAMERA_NEEDS_CLIENT_INFO := true
-
-# Charger
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Dex
 ifeq ($(HOST_OS),linux)
@@ -130,16 +124,10 @@ BOARD_ROOT_EXTRA_FOLDERS := op1 op2 op_odm
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
+include device/qcom/sepolicy/SEPolicy.mk
+
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/private \
-    device/qcom/sepolicy/qva/private
-
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/qcom/sepolicy/generic/public \
-    device/qcom/sepolicy/qva/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -64,9 +64,9 @@ lib64/libmmosal.so
 -app/NxpSecureElement/NxpSecureElement.apk
 etc/nfcee_access.xml|6621fa1927720008fc0bdf47d259b18c871c2c79
 etc/permissions/com.nxp.nfc.xml
-framework/com.nxp.nfc.jar
+framework/com.nxp.nfc.jar|41d92d0b7fdc3d50cd6ea4be8664614aa9d41823
 lib64/libnxpnfc_nci_jni.so
-lib64/libnxpnfc-nci.so
+lib64/libnxpnfc-nci.so|e31ab7b2b282c3b81fd13ab1b40b3cc8d90d8b5b
 
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
@@ -83,7 +83,7 @@ product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # Telephony (qti-telephony-common) - from DRG - QKQ1.190828.002
-product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
+# product/framework/qti-telephony-common.jar|b4d187700f279cdbd40e74b4c3be4504f10d8b29
 
 # WiFi Display
 bin/wfdservice

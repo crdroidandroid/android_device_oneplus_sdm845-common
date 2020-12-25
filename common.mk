@@ -37,6 +37,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_EXTRA_VNDK_VERSIONS := $(PRODUCT_TARGET_VNDK_VERSION)
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -84,7 +85,9 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCam
+    GCam \
+    libcvface_api \
+    Snap
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/etc/permissions/org.codeaurora.snapcam.xml:system/etc/permissions/org.codeaurora.snapcam.xml
@@ -107,6 +110,15 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan \
     vendor.display.config@1.0
+
+# Doze
+PRODUCT_PACKAGES += \
+    OnePlusDoze
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder \
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -190,16 +202,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libcutils-v29.so \
+    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libcutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcutils-v29.so
+
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libnl
+    libnl \
+    WifiOverlay
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
-    
+
 # OnePlus Camera
 # (portrait mode & night sight don't work correctly currently)
-$(call inherit-product-if-exists, vendor/onepluscamera/config.mk)
+# $(call inherit-product-if-exists, vendor/addons/onepluscamera/config.mk)
