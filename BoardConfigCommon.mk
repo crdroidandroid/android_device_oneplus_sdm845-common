@@ -54,6 +54,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/sdm845
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_USE_LATEST_CLANG := true
+TARGET_KERNEL_CONFIG := enchilada_defconfig
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 # Platform
