@@ -56,4 +56,7 @@
     <string name="vib_call_strength_summary_head">Задати силу вібрації при вхідному дзвінку</string>
     <string name="vib_notif_strength_title_head">Повідомлення</string>
     <string name="vib_notif_strength_summary_head">Задати силу вібрації при вхідному повідомленні</string>
+
+    <string name="single_tap_gesture_title">Дотик для активації</string>
+    <string name="single_tap_gesture_summary">Активація екрана одним дотиком</string>
 </resources>

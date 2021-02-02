@@ -23,9 +23,9 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 
-public class HBMModeSwitch implements OnPreferenceChangeListener {
+public class SRGBModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm";
+    private static final String FILE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
@@ -45,7 +45,7 @@ public class HBMModeSwitch implements OnPreferenceChangeListener {
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         Boolean enabled = (Boolean) newValue;
-        Utils.writeValue(getFile(), enabled ? "5" : "0");
+        Utils.writeValue(getFile(), enabled ? "1" : "0");
         return true;
     }
 }

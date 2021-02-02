@@ -120,12 +120,12 @@ public class KeyHandler implements DeviceKeyHandler {
         if (mVibrator == null || !mVibrator.hasVibrator()) {
             mVibrator = null;
         }
-        
+
         IntentFilter systemStateFilter = new IntentFilter(Intent.ACTION_SCREEN_ON);
         systemStateFilter.addAction(Intent.ACTION_SCREEN_OFF);
         mContext.registerReceiver(mSystemStateReceiver, systemStateFilter);
 
-        isOPCameraAvail = Utils.isAvailableApp("com.oneplus.camera", context);
+        isOPCameraAvail = PackageUtils.isAvailableApp("com.oneplus.camera", context);
         if (isOPCameraAvail) {
             mClientObserver = new ClientPackageNameObserver(CLIENT_PACKAGE_PATH);
             mClientObserver.startWatching();
@@ -187,7 +187,7 @@ public class KeyHandler implements DeviceKeyHandler {
     public boolean canHandleKeyEvent(KeyEvent event) {
         return false;
         }
-        
+
     private void onDisplayOff() {
         if (DEBUG) Log.i(TAG, "Display off");
         if (mClientObserver != null) {
