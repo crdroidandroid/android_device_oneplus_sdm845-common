@@ -1,0 +1,2 @@
+# Type define oneplus camera domain
+type oneplus_camera_app, domain, coredomain;
