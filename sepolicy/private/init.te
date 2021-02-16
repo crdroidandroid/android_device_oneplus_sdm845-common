@@ -5,6 +5,7 @@ allow init vendor_configs_file:dir mounton;
 allow init {
     sysfs_fod
     sysfs_graphics
+    sysfs_livedisplay_tuneable
 }:file { open read setattr };
 
 # Allow init to write to otg_switch

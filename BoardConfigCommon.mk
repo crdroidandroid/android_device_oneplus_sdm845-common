@@ -79,6 +79,9 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Camera
 TARGET_CAMERA_NEEDS_CLIENT_INFO := true
 
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
 # Dex
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -124,7 +127,7 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Sepolicy
 include device/qcom/sepolicy/SEPolicy.mk
-
+SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 

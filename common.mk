@@ -85,9 +85,9 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCam \
     libcvface_api \
-    Snap
+    Snap \
+    GCam
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/etc/permissions/org.codeaurora.snapcam.xml:system/etc/permissions/org.codeaurora.snapcam.xml
@@ -110,10 +110,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan \
     vendor.display.config@1.0
-
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -224,4 +220,4 @@ PRODUCT_COPY_FILES += \
 
 # OnePlus Camera
 # (portrait mode & night sight don't work correctly currently)
-# $(call inherit-product-if-exists, vendor/addons/onepluscamera/config.mk)
+$(call inherit-product-if-exists, vendor/addons/onepluscamera/config.mk)
