@@ -356,8 +356,7 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power-service.oneplus-libperfmgr
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -386,7 +385,10 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/oneplus \
+    hardware/oneplus/aidl/power-libperfmgr \
     vendor/qcom/opensource/usb/etc \
     vendor/ih8sn
 
