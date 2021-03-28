@@ -31,6 +31,9 @@ namespace implementation {
 static constexpr const char* kDcDimmingStatusPath =
         "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en";
 
+static constexpr const char* kDcDitherPath =
+        "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dither_en";
+
 Return<bool> AntiFlicker::isEnabled() {
     std::string buf;
     if (!android::base::ReadFileToString(kDcDimmingStatusPath, &buf)) {
@@ -43,6 +46,10 @@ Return<bool> AntiFlicker::isEnabled() {
 Return<bool> AntiFlicker::setEnabled(bool enabled) {
     if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kDcDimmingStatusPath)) {
         LOG(ERROR) << "Failed to write " << kDcDimmingStatusPath;
+        return false;
+    }
+	if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kDcDitherPath)) {
+        LOG(ERROR) << "Failed to write " << kDcDitherPath;
         return false;
     }
     return true;
