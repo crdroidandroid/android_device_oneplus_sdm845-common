@@ -1,4 +1,5 @@
 ## Hola amiguitos
 
-This was a dead-end attempt to add LiveDisplay components (like AntiFlicker, primarily) to an otherwise fairly stagnant device tree, even though the hardware supports it (as long as the kernel has the correct nodes defined). 
-Going to be re-adding DeviceSettings instead of trying to move everything to lineage-sdk components, until such time as the LineageOS maintainers decide to spend the time focusing on older devices like ours again. 
+This is a copy of 11.0-test-hybrid1.0 branch (I should really learn to make "tags", because that's effectively what I'm doing with these), which was used for the March 2021 release of crDroid v7.4.
+
+It's based on the lineage-18.1 tree, with patchset 18 (30 Jan 2021, latest as of release) of unmerged A11 bringup commits by luk1337 from the LineageOS gerrit, plus relevant commits from the crDroid 10.0 device tree history, plus a couple modifications for the move to Illusion kernel (like removing panel modes from livedisplay since the LOS kernel node doesn't exist in the AOSiP kernel now). 
