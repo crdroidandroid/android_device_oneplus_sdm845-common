@@ -20,12 +20,15 @@
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
+#include "AntiFlicker.h"
 #include "DisplayModes.h"
 #include "SunlightEnhancement.h"
 
+using ::vendor::lineage::livedisplay::V2_1::IAntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::IDisplayModes;
 using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
 using ::vendor::lineage::livedisplay::V2_1::implementation::DisplayModes;
 using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
@@ -33,11 +36,17 @@ using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 
 int main() {
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
+    android::sp<IAntiFlicker> afService = new AntiFlicker();
     android::sp<IDisplayModes> modesService = new DisplayModes();
     android::sp<IPictureAdjustment> paService = new PictureAdjustment(controller);
     android::sp<ISunlightEnhancement> sreService = new SunlightEnhancement();
 
     android::hardware::configureRpcThreadpool(2, true /*callerWillJoin*/);
+
+    if (afService->registerAsService() != android::OK) {
+        LOG(ERROR) << "Cannot register anti flicker HAL service.";
+        return 1;
+    }
 
     if (modesService->registerAsService() != android::OK) {
         LOG(ERROR) << "Cannot register display modes HAL service.";
