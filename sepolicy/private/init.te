@@ -10,3 +10,6 @@ allow init {
 
 # Allow init to write to otg_switch
 allow init sysfs_usb_supply:file w_file_perms;
+
+# Allow init to write to smart charging switch
+allow init sysfs_battery_supply:file { setattr };
