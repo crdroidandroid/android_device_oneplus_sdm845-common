@@ -1,3 +1,12 @@
+on post-fs-data
+
+    # Charging switches
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+    chown system system /sys/class/power_supply/battery/battery_charging_enabled
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/op_disable_charge
+
 on boot
     # Fingerprint
     chown system system /sys/devices/platform/soc/soc:goodix_fp/proximity_state
