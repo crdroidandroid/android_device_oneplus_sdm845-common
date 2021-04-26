@@ -1,3 +1,2 @@
 type vendor_camera_prop, property_type;
-type vendor_display_prop, property_type;
 type vendor_nfc_prop, property_type;
