@@ -44,7 +44,7 @@ int main() {
     LOG(INFO) << "LiveDisplay HAL service is starting.";
 
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    sp<DisplayModes> dm = new DisplayModes();
+    sp<DisplayModes> dm = new DisplayModes(controller);
     sp<PictureAdjustment> pa = new PictureAdjustment(controller);
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
@@ -62,6 +62,10 @@ int main() {
                    << status << ")";
         goto shutdown;
     }
+
+    // Update default PA on setDisplayMode
+    dm->registerDisplayModeSetCallback(
+            std::bind(&PictureAdjustment::updateDefaultPictureAdjustment, pa));
 
     LOG(INFO) << "LiveDisplay HAL service is ready.";
     joinRpcThreadpool();
