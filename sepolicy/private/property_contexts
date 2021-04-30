@@ -1,2 +1,5 @@
+# Display
+sys.display.mode    u:object_r:config_prop:s0
+
 # Fastbootd
 ro.fastbootd.available    u:object_r:exported_default_prop:s0
