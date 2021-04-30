@@ -7,6 +7,12 @@
 /op_odm(/.*)?    u:object_r:system_file:s0
 
 # Files in sysfs
+## Display
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm    u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en     u:object_r:sysfs_livedisplay_tuneable:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dither_en     u:object_r:sysfs_livedisplay_tuneable:s0
+
+## Fingerprint
 /sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
 
 # HALs
