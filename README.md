@@ -1,4 +1,5 @@
 ## Hola amiguitos
 
-This is based on the newly-rebased-and-officially-released lineage-18.1 branch, with crDroid goodies brought back in.
-We'll get there eventually, honest.
+Forked & rebased from the freshly-released official lineage-18.1 branch of the LineageOS device tree.
+
+* Please note that the lineage.dependencies file is woefully out of date; roomservice will not find everything necessary to compile the ROM correctly.
