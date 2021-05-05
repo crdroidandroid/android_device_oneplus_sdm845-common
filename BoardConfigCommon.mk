@@ -48,6 +48,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=a600000.dwc3 \
     ehci-hcd.park=3 \
     firmware_class.path=/vendor/firmware_mnt/image \
+    kpti=off \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
