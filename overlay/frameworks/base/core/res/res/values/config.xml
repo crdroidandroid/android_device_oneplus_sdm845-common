@@ -367,4 +367,85 @@
      limitations under the License.
 -->
 
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">true</bool>
+
+    <!-- Whether device ignores the RSSNR signal implementation -->
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Whether device supports sensor based doze customizations -->
+    <bool name="config_dozePulseTilt">true</bool>
+    <bool name="config_dozePulseProximity">true</bool>
+    <bool name="config_deviceHaveWakeUpProximity">true</bool>
+
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+    <integer name="config_smartChargingBatteryLevel">80</integer>
+    <integer name="config_smartChargingBatteryResumeLevel">60</integer>
+    <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_smartChargingSuspendValue" translatable="false">1</string>
+    <string name="config_smartChargingResumeValue" translatable="false">0</string>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
+
+    <!-- Any package that has one of the package names defined below will be prevented
+         from using specific sensors in order to stop battery drain -->
+    <string-array name="config_blockPackagesSensorDrain">
+        <item>com.whatsapp</item>
+        <item>com.gbwhatsapp</item>
+        <item>com.yowhatsapp</item>
+        <item>com.whatsapp.plus</item>
+        <item>org.telegram.messenger</item>
+        <item>org.telegram.messenger.plus</item>
+        <item>com.netease.cloudmusic</item>
+        <item>fm.xiami.main</item>
+        <item>com.tencent.weread</item>
+        <item>com.netease.snailread</item>
+        <item>com.tencent.mm</item>
+        <item>com.baidu.browser.apps</item>
+        <item>com.tencent.tim</item>
+        <item>com.tencent.ig</item>
+        <item>org.thunderdog.challegram</item>
+        <item>com.snapchat.android</item>
+        <item>com.facebook.orca</item>
+        <item>com.Slack</item>
+        <item>tugapower.codeaurora.browser</item>
+        <item>org.mozilla.firefox</item>
+        <item>com.android.chrome</item>
+        <item>com.amazon.mShop.android.shopping</item>
+        <item>com.google.android.inputmethod.latin</item>
+        <item>com.google.android.apps.plus</item>
+        <item>com.google.android.apps.maps</item>
+        <item>ru.ok.android</item>
+        <item>com.instagram.android.MainTabActivity</item>
+        <item>com.facebook.orca</item>
+        <item>com.facebook.orca.StartScreenActivity</item>
+        <item>com.spotify.music</item>
+        <item>com.spotify.music.MainActivity</item>
+        <item>com.android.vending</item>
+        <item>com.trtf.blue</item>
+        <item>com.truecaller</item>
+        <item>com.gaana</item>
+        <item>com.facebook.katana.LoginActivity</item>
+    </string-array>
+
+    <!-- Defines the sysfs attribute path used by the device
+         to enable/disable DC dimming. -->
+    <string name="config_deviceDcDimmingSysfsNode">/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en</string>
+
+    <!-- Defines custom OEM sensor for pocket detection. -->
+    <string name="config_pocketJudgeVendorSensorName">oneplus.sensor.pocket</string>
+
 </resources>
