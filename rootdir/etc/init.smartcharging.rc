@@ -1,0 +1,13 @@
+on boot
+
+    # Charging switches & info
+    chown system system /sys/class/power_supply/battery/charging_enabled
+    chmod 0660 /sys/class/power_supply/battery/charging_enabled
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/op_disable_charge
+    chmod 0660 /sys/class/power_supply/battery/op_disable_charge
+    chown system system /sys/class/power_supply/battery/remaining_capacity
+    chmod 0660 /sys/class/power_supply/battery/remaining_capacity
+    chown system system /sys/class/power_supply/battery/force_recharge
+    chmod 0660 /sys/class/power_supply/battery/force_recharge

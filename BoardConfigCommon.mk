@@ -82,6 +82,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Display
+TARGET_SCREEN_DENSITY := 411
 TARGET_USES_HWC2 := true
 
 # DRM
