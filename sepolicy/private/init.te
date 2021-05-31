@@ -9,7 +9,7 @@ allow init {
     sysfs_fod
     sysfs_graphics
     sysfs_livedisplay_tuneable
-}:file { open read setattr };
+}:file { r_file_perms setattr };
 
 # Allow init to write to otg_switch
 allow init { sysfs_usb_supply vendor_sysfs_usb_supply }:file w_file_perms;
