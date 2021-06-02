@@ -43,7 +43,7 @@ product/lib64/libdpmtcm.so
 
 # IMS
 lib64/libdiag_system.so
--product/priv-app/ims/ims.apk|57fb9daf1aad6a4cdf3167f8ced1479223dc624d9
+-product/priv-app/ims/ims.apk|57fb9daf1aad6a4cdf3167f8ced1479223dc624d
 product/lib64/libimscamera_jni.so
 product/lib64/libimsmedia_jni.so
 product/lib64/lib-imsvideocodec.so
