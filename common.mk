@@ -35,7 +35,8 @@ PRODUCT_PACKAGES += \
     OnePlusIconShapeRoundedRectOverlay \
     OnePlusIconShapeSquareOverlay \
     OnePlusIconShapeSquircleOverlay \
-    OnePlusIconShapeTeardropOverlay
+    OnePlusIconShapeTeardropOverlay \
+    TelephonyResCommon
 
 # Properties
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
@@ -212,6 +213,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Vendor Overlays
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vendor-overlay/etc/vintf/manifest/st_disable.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/st_disable.xml
 
 # VNDK
 PRODUCT_COPY_FILES += \
