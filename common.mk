@@ -357,6 +357,7 @@ PRODUCT_BOOT_JARS += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.oneplus-libperfmgr \
+    android.hardware.power.stats@1.0-service.mock \
     libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
