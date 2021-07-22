@@ -605,6 +605,12 @@
     },
     {
       "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "TASchedtuneBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
       "Node": "TASchedtunePreferIdle",
       "Duration": 0,
       "Value": "0"
