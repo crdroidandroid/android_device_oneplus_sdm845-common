@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus6Oxygen_22.J.53_OTA_053_all_2104202241_ecefb
+# All unpinned blobs below are extracted from OnePlus6TOxygen_34.J.55_OTA_055_all_2107132253_b2cbbb97b4eee
 
 # ANT+
 -lib/libantradio.so
