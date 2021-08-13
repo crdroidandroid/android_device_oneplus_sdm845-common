@@ -1,10 +1,20 @@
 [
   {
-    "repository": "android_hardware_oneplus",
-    "target_path": "hardware/oneplus"
+    "remote": "crdroid",
+    "repository": "crdroidandroid/android_hardware_oneplus",
+    "target_path": "hardware/oneplus",
+    "branch": "12.1-op6"
   },
   {
-    "repository": "android_kernel_oneplus_sdm845",
-    "target_path": "kernel/oneplus/sdm845"
+    "remote": "crdroid",
+    "repository": "crdroidandroid/android_kernel_oneplus_sdm845",
+    "target_path": "kernel/oneplus/sdm845",
+    "branch": "12.1"
+  },
+  {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/proprietary_vendor_oneplus_op6",
+    "target_path": "vendor/oneplus",
+    "branch": "12.1"
   }
 ]
