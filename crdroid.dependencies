@@ -1,0 +1,32 @@
+[
+  {
+    "remote": "crdroid",
+    "repository": "Terminator-J/crdroid_device_oneplus_common",
+    "target_path": "device/oneplus/common",
+    "branch": "10.0-test"
+  },
+  {
+    "remote": "crdroid",
+    "repository": "crdroidandroid/android_kernel_oneplus_sdm845",
+    "target_path": "kernel/oneplus/sdm845",
+    "branch": "10.0"
+  },
+  {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/proprietary_vendor_oneplus",
+    "target_path": "vendor/oneplus",
+    "branch": "10.0-sdm845-common"
+  },
+  {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r437112b",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-latest",
+    "branch": "11.0"
+  },
+  {
+    "remote": "lineage",
+    "repository": "android_tools_extract-utils",
+    "target_path": "tools/extract-utils",
+    "branch": "lineage-18.1"
+  }
+]
