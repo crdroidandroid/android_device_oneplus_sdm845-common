@@ -19,6 +19,11 @@ on post-fs
     chown system system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call
     chown system system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong
 
+on init && property:ro.boot.mode=charger
+    mount_all /vendor/etc/charger_fw_fstab.qti --early
+    write /sys/kernel/boot_adsp/boot 1
+    wait /sys/class/power_supply/battery
+
 on charger
     write /sys/class/backlight/panel0-backlight/brightness 150
 
