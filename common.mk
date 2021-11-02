@@ -195,6 +195,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-org.lineageos.deviceextras_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-org.lineageos.deviceextras_ext.xml
 
+# Dex
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
