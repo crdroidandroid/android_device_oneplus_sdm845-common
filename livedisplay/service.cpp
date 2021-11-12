@@ -21,13 +21,10 @@
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
 #include "DisplayModes.h"
-#include "SunlightEnhancement.h"
 
 using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
 using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
 using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 
@@ -35,7 +32,6 @@ int main() {
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
     android::sp<IDisplayModes> modesService = new DisplayModes();
     android::sp<IPictureAdjustment> paService = new PictureAdjustment(controller);
-    android::sp<ISunlightEnhancement> sreService = new SunlightEnhancement();
 
     android::hardware::configureRpcThreadpool(2, true /*callerWillJoin*/);
 
@@ -46,11 +42,6 @@ int main() {
 
     if (paService->registerAsService() != android::OK) {
         LOG(ERROR) << "Cannot register picture adjustment HAL service.";
-        return 1;
-    }
-
-    if (sreService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register sunlight enhancement HAL service.";
         return 1;
     }
 
