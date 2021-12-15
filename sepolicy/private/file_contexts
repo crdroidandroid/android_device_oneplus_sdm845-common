@@ -1,5 +1,6 @@
 # Data files
-/data/misc/display(/.*)?      u:object_r:display_misc_file:s0
+/data/misc/display(/.*)?                  u:object_r:display_misc_file:s0
+/data/misc/lineage/client_package_name    u:object_r:lineage_data_file:s0
 
 # Files in rootfs
 /op1(/.*)?       u:object_r:op1_file:s0

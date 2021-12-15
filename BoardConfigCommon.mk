@@ -81,6 +81,11 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
+# Camera
+TARGET_CAMERA_NEEDS_CLIENT_INFO := true
+TARGET_USES_QTI_CAMERA_DEVICE := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 # Display
 TARGET_SCREEN_DENSITY := 411
 TARGET_USES_HWC2 := true

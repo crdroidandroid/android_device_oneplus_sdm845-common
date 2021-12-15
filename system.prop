@@ -11,10 +11,17 @@ ro.kernel.ebpf.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.camera.assert.panic=true
+persist.vendor.camera.privapp.list=com.oneplus.camera
+ro.opcamera.support=true
 vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.oneplus.camera,org.codeaurora.snapcam
+vendor.camera.skip_unconfigure.packagelist=com.oneplus.camera
 
 # Charger
 ro.charger.disable_init_blank=true
+
+# Codec
+debug.stagefright.ccodec=1
 
 # Display
 debug.gralloc.gfx_ubwc_disable=0
