@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus6Oxygen_22.J.60_OTA_0600_all_2108052235_37de6
+# All unpinned blobs below are extracted from OnePlus6TOxygen_34.J.62_OTA_0620_all_2111252336_339a2fa8335f21
 
 # ANT+
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
