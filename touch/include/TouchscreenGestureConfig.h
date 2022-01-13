@@ -3,8 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef TOUCH_ONEPLUS_TOUCHSCREENGESTURECONFIG_H
-#define TOUCH_ONEPLUS_TOUCHSCREENGESTURECONFIG_H
+#pragma once
 
 #include <map>
 
@@ -34,5 +33,3 @@ const std::map<int32_t, TouchscreenGesture::GestureInfo> kGestureInfoMap = {
 }  // namespace lineage
 }  // namespace vendor
 }  // namespace aidl
-
-#endif  // TOUCH_ONEPLUS_TOUCHSCREENGESTURECONFIG_H

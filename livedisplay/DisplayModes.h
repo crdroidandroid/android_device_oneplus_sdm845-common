@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_LIVEDISPLAY_DISPLAYMODES_H
-#define VENDOR_LINEAGE_LIVEDISPLAY_DISPLAYMODES_H
+#pragma once
 
 #include <aidl/vendor/lineage/livedisplay/BnDisplayModes.h>
 #include <map>
@@ -48,5 +47,3 @@ class DisplayModes : public BnDisplayModes {
 }  // namespace lineage
 }  // namespace vendor
 }  // namespace aidl
-
-#endif  // VENDOR_LINEAGE_LIVEDISPLAY_DISPLAYMODES_H
