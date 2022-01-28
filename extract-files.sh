@@ -76,6 +76,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "s/@2.1-service$/@2.1-service.oneplus/" "${2}"
             ;;
+        system_ext/lib64/lib-imsvideocodec.so)
+            [ "$2" = "" ] && return 0
+            grep -q lib-imsvtshim.so "${2}" ||  "${PATCHELF}" --add-needed "lib-imsvtshim.so" "${2}"
+            ;;
         *)
             return 1
             ;;

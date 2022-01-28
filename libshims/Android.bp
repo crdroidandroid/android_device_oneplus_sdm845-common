@@ -1,0 +1,4 @@
+cc_library_shared {
+    name: "lib-imsvtshim",
+    srcs: ["lib-imsvtshim.cpp"],
+}
