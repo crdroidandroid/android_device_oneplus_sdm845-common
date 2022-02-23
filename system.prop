@@ -47,6 +47,9 @@ iorapd.readahead.enable=true
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Memory Management
+ro.vendor.qti.sys.fw.bg_apps_limit=64
+
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
 ro.vendor.qti.core_ctl_min_cpu=2
