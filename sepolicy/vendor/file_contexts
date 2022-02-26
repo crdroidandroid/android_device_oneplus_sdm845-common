@@ -1,7 +1,8 @@
 # Binaries
-/(vendor|system/vendor)/bin/dashd                      u:object_r:dashd_exec:s0
-/(vendor|system/vendor)/bin/opf-service                u:object_r:opf_exec:s0
-/(vendor|system/vendor)/bin/wifi-mac-generator         u:object_r:wifi-mac-generator_exec:s0
+/(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
+/(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
+/(vendor|system/vendor)/bin/tri-state-key_daemon    u:object_r:tri-state-key_daemon_exec:s0
+/(vendor|system/vendor)/bin/wifi-mac-generator      u:object_r:wifi-mac-generator_exec:s0
 
 # Block devices
 /dev/block/platform/soc/1d84000\.ufshc/by-name/config                  u:object_r:frp_block_device:s0
@@ -43,4 +44,6 @@
 /mnt/vendor/op2(/.*)?    u:object_r:op2_file:s0
 
 # Sys files
-/sys/project_info(/.*)?    u:object_r:sysfs_project_info:s0
+/sys/bus/platform/devices/soc/soc:tri_state_key/tri_state    u:object_r:sysfs_tri_state_key:s0
+/sys/devices/platform/soc/soc:tri_state_key/tri_state        u:object_r:sysfs_tri_state_key:s0
+/sys/project_info(/.*)?                                      u:object_r:sysfs_project_info:s0
