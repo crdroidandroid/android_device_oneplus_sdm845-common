@@ -10,6 +10,7 @@ allow init {
     sysfs_fpc_proximity
     sysfs_graphics
     sysfs_livedisplay_tuneable
+    vendor_sysfs_msm_perf
 }:file { open read setattr };
 
 # Allow init to write to otg_switch

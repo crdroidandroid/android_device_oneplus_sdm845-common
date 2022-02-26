@@ -7,7 +7,16 @@
 /op_odm(/.*)?    u:object_r:system_file:s0
 
 # Files in sysfs
-/sys/devices/platform/soc/soc:goodix_fp/proximity_state    u:object_r:sysfs_fpc_proximity:s0
+/sys/devices/platform/soc/soc:goodix_fp/proximity_state                                   u:object_r:sysfs_fpc_proximity:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en    u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/dither_en         u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/card0-DSI-1/hbm               u:object_r:sysfs_dm:s0
+/sys/devices/platform/soc/ae00000\.qcom\,mdss_mdp/drm/card0/sde-crtc-0/measured_fps       u:object_r:sysfs_dm:s0
+
+/sys/devices/platform/soc/c440000\.qcom\,spmi/spmi-0/spmi0-03/c440000\.qcom\,spmi\:qcom\,pmi8998\@3\:qcom\,haptics\@c000/leds/vibrator(/.*)?    u:object_r:sysfs_leds:s0
+
+/sys/module/msm_drm/parameters(/.*)?                 u:object_r:sysfs_dm:s0
+/sys/module/msm_performance/parameters/touchboost    u:object_r:vendor_sysfs_msm_perf:s0
 
 # HALs
 /(product|system/product)/vendor_overlay/[0-9]+/bin/hw/android\.hardware\.light@2\.0-service              u:object_r:hal_light_default_exec:s0

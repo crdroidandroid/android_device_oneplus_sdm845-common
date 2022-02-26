@@ -1,9 +1,13 @@
-# rootfs
-type op1_file, file_type;
-type op2_file, file_type;
+# data
+type lineage_data_file, file_type, data_file_type, core_data_file_type;
+type display_misc_file, file_type, data_file_type, core_data_file_type;
 
 # proc
 type proc_touchpanel, fs_type, proc_type;
+
+# rootfs
+type op1_file, file_type;
+type op2_file, file_type;
 
 # sysfs
 type sysfs_aod, sysfs_type, fs_type;
@@ -12,9 +16,7 @@ type sysfs_fpc_proximity, sysfs_type, fs_type;
 type sysfs_graphics, sysfs_type, fs_type;
 type sysfs_oem, sysfs_type, fs_type;
 type sysfs_ssr, sysfs_type, fs_type;
-type sysfs_ssr_toggle,  sysfs_type, fs_type;
+type sysfs_ssr_toggle, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
+type vendor_sysfs_msm_perf, sysfs_type, fs_type;
 type vendor_sysfs_usb_supply, sysfs_type, fs_type;
-
-# data
-type display_misc_file, file_type, data_file_type, core_data_file_type;
