@@ -97,6 +97,7 @@ on fs
 #add for tri_state_key
     chown system system /sys/bus/platform/devices/soc/soc\:tri_state_key/hall_data_calib
     chown system system /sys/bus/platform/devices/soc/soc\:tri_state_key/hall_set_value
+    chown system system /sys/bus/platform/devices/soc/soc\:tri_state_key/tri_state
 
 #add for tp debug log & to set node gesture_enable
     chown system system /proc/touchpanel/tp_debug_log
