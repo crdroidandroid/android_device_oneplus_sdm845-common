@@ -14,3 +14,4 @@ type sysfs_dash_charger, fs_type, proc_type, sysfs_type;
 type sysfs_fod, fs_type, sysfs_type;
 type sysfs_fpc, fs_type, sysfs_type;
 type sysfs_project_info, fs_type, sysfs_type;
+type sysfs_tri_state_key, sysfs_type, fs_type;
