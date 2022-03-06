@@ -59,7 +59,8 @@ DisplayModes::DisplayModes() : mDefaultModeId(0) {
 
 // Methods from ::vendor::lineage::livedisplay::V2_0::IDisplayModes follow.
 Return<void> DisplayModes::getDisplayModes(getDisplayModes_cb resultCb) {
-    std::vector<DisplayMode> modes;
+    std::vector<V2_0::DisplayMode> modes;
+
     for (const auto& entry : kModeMap) {
         modes.push_back({entry.first, entry.second.name});
     }

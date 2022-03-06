@@ -7,10 +7,7 @@
             <name>IDisplayModes</name>
             <instance>default</instance>
         </interface>
-        <interface>
-            <name>IPictureAdjustment</name>
-            <instance>default</instance>
-        </interface>
+        <fqname>@2.0::IPictureAdjustment/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.lineage.touch</name>

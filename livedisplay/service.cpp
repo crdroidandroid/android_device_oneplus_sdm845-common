@@ -20,35 +20,55 @@
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 #include <livedisplay/sdm/PictureAdjustment.h>
+#include <vendor/lineage/livedisplay/2.0/IPictureAdjustment.h>
+
 #include "DisplayModes.h"
 
+using android::OK;
+using android::sp;
+using android::status_t;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+
+using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
+using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 using ::vendor::lineage::livedisplay::V2_0::IDisplayModes;
 using ::vendor::lineage::livedisplay::V2_0::IPictureAdjustment;
 using ::vendor::lineage::livedisplay::V2_0::implementation::DisplayModes;
-using ::vendor::lineage::livedisplay::V2_0::sdm::PictureAdjustment;
-using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
 
 int main() {
+    status_t status = OK;
+
+    android::ProcessState::initWithDriver("/dev/vndbinder");
+
+    LOG(INFO) << "LiveDisplay HAL service is starting.";
+
     std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    android::sp<IDisplayModes> modesService = new DisplayModes();
-    android::sp<IPictureAdjustment> paService = new PictureAdjustment(controller);
+    sp<DisplayModes> dm = new DisplayModes();
+    sp<PictureAdjustment> pa = new PictureAdjustment(controller);
 
-    android::hardware::configureRpcThreadpool(2, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (modesService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register display modes HAL service.";
-        return 1;
+    status = dm->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL DisplayModes Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    if (paService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register picture adjustment HAL service.";
-        return 1;
+    status = pa->registerAsService();
+    if (status != OK) {
+        LOG(ERROR) << "Could not register service for LiveDisplay HAL PictureAdjustment Iface ("
+                   << status << ")";
+        goto shutdown;
     }
 
-    LOG(INFO) << "LiveDisplay HAL service ready.";
+    LOG(INFO) << "LiveDisplay HAL service is ready.";
+    joinRpcThreadpool();
+    // Should not pass this line
 
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "LiveDisplay HAL service failed to join thread pool.";
+shutdown:
+    // In normal operation, we don't expect the thread pool to shutdown
+    LOG(ERROR) << "LiveDisplay HAL service is shutting down.";
     return 1;
 }
