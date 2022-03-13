@@ -12,6 +12,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.deviceextras.rc",
+    src: "init.deviceextras.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.oem.rc",
     src: "init.oem.rc",
     sub_dir: "init/hw",

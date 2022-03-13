@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2021-2022 The Evolution X project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different OnePlus serires/devices.  Do not translate. -->
+<resources>
+
+    <!-- DC-dimming sysfs node path -->
+    <string name="node_dc_mode_switch">/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en</string>
+
+    <!-- Ear gain sysfs node path -->
+     <string name="node_ear_gain_preference">/sys/kernel/sound_control/earpiece_gain</string>
+
+    <!-- High Brightnes sysfs node path -->
+    <string name="node_hbm_mode_switch">/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm</string>
+
+    <!-- Measured FPS sysfs node path -->
+    <string name="node_fps_info_service">/sys/class/drm/sde-crtc-0/measured_fps</string>
+
+    <!-- Mic gain sysfs node path -->
+    <string name="node_mic_gain_preference">/sys/kernel/sound_control/mic_gain</string>
+
+    <!-- USB 2.0 Force fastcharge sysfs node path -->
+    <string name="node_usb2_fast_charge_mode_switch">/sys/kernel/fast_charge/force_fast_charge</string>
+
+    <!-- OTG sysfs node path -->
+    <string name="otg_mode_switch">/sys/class/power_supply/usb/otg_switch</string>
+
+    <!-- Power Efficient Workqueue sysfs node path -->
+    <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
+
+    <!-- Call vibration sysfs node path -->
+    <string name="node_vibrator_call_strength_preference">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call</string>
+
+    <!-- Notif vibration sysfs node path -->
+    <string name="node_vibrator_notif_strength_preference">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_strong</string>
+
+    <!-- System vibration sysfs node path -->
+    <string name="node_vibrator_strength_preference">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_user</string>
+</resources>

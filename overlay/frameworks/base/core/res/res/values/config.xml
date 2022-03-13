@@ -432,4 +432,7 @@
         <item>activity_manager/oom_re_ranking_number_to_re_rank=5</item>
         <item>activity_manager/oom_re_ranking_preserve_top_n_apps=16</item>
     </string-array>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_POSITION</string>
 </resources>
