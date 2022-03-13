@@ -183,6 +183,7 @@ PRODUCT_PACKAGES += \
 # Common init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.deviceextras.rc \
     init.oem.rc \
     init.qcom.rc \
     init.qcom.power.rc \
@@ -203,6 +204,13 @@ PRODUCT_PACKAGES += \
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
+# DeviceExtras Package
+PRODUCT_PACKAGES += \
+    DeviceExtras
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-org.lineageos.deviceextras_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-org.lineageos.deviceextras_ext.xml
 
 # Display
 PRODUCT_PACKAGES += \
@@ -392,6 +400,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oneplus \
+    hardware/oneplus/DeviceExtras \
     vendor/qcom/opensource/usb/etc \
     vendor/ih8sn
 
@@ -428,7 +437,6 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon.vendor
 
 # Update engine
