@@ -1,1 +1,4 @@
+allow system_server proc_touchpanel:dir { search };
+allow system_server sysfs_tri_state_key:file rw_file_perms;
+
 dontaudit system_server debugfs_wakeup_sources:file { read };
