@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="org.lineageos.oneplus.DeviceExtras">
+        <permission name="android.permission.INJECT_EVENTS" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.VIBRATE"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="android.permission.WRITE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>
