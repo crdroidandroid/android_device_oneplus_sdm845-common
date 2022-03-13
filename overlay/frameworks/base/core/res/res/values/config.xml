@@ -410,6 +410,9 @@
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
 
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_POSITION</string>
+
 <!-- The following flags are currently dead, but, maybe they'll be back someday -->
 
     <!-- Smart charging
