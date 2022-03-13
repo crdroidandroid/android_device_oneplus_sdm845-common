@@ -2,6 +2,7 @@
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
                    2017-2018 The LineageOS Project
+                   2019-2022 The Evolution X Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -28,13 +29,13 @@
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system_ext/priv-app/LineageParts/LineageParts.apk</item>
-        <item>/system_ext/app/KeyHandler/KeyHandler.apk</item>
+        <item>/system_ext/priv-app/DeviceExtras/DeviceExtras.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
-        <item>org.lineageos.settings.device.KeyHandler</item>
+        <item>org.lineageos.oneplus.DeviceExtras.slider.KeyHandler</item>
     </string-array>
 
     <!-- Hardware keys present on the device, stored as a bit field.

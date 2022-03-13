@@ -170,6 +170,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
+    init.deviceextras.rc \
     init.oem.rc \
     init.qcom.class_core.sh \
     init.qcom.early_boot.sh \
@@ -185,6 +186,13 @@ PRODUCT_PACKAGES += \
 # Component overrides
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
+# DeviceExtras Package
+PRODUCT_PACKAGES += \
+    DeviceExtras
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-org.lineageos.deviceextras_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-org.lineageos.deviceextras_ext.xml
 
 # Display
 PRODUCT_PACKAGES += \
@@ -371,6 +379,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/oneplus \
+    hardware/oneplus/DeviceExtras \
     vendor/qcom/opensource/usb/etc \
     vendor/ih8sn
 
@@ -406,7 +415,6 @@ PRODUCT_PACKAGES += \
 
 # tri-state-key
 PRODUCT_PACKAGES += \
-    KeyHandler \
     tri-state-key_daemon.vendor
 
 # Trust HAL
