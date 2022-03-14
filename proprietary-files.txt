@@ -14,7 +14,6 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -427,10 +426,7 @@ vendor/lib64/libpvr.so
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
-vendor/firmware/a630_zap.b01
 vendor/firmware/a630_zap.b02
-vendor/firmware/a630_zap.elf
-vendor/firmware/a630_zap.mdt
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so
@@ -568,12 +564,9 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -630,20 +623,6 @@ vendor/etc/libnfc-nci_productline.conf
 vendor/etc/libnfc-nci_shenzhentong.conf
 vendor/etc/libnfc-nci_yangchengtong.conf
 vendor/etc/libnfc-nci_zhengzhoubus.conf
-vendor/etc/libnfc-nxp.conf
-vendor/etc/libnfc-nxp_RF.conf
-vendor/etc/libnfc-nxp_RF_beijingbus.conf
-vendor/etc/libnfc-nxp_RF_changancard.conf
-vendor/etc/libnfc-nxp_RF_productline.conf
-vendor/etc/libnfc-nxp_RF_shenzhentong.conf
-vendor/etc/libnfc-nxp_RF_yangchengtong.conf
-vendor/etc/libnfc-nxp_RF_zhengzhoubus.conf
-vendor/etc/libnfc-nxp_beijingbus.conf
-vendor/etc/libnfc-nxp_changancard.conf
-vendor/etc/libnfc-nxp_productline.conf
-vendor/etc/libnfc-nxp_shenzhentong.conf
-vendor/etc/libnfc-nxp_yangchengtong.conf
-vendor/etc/libnfc-nxp_zhengzhoubus.conf
 vendor/lib/libpn553_fw.so
 vendor/lib64/hw/android.hardware.nfc@1.0-impl.so
 vendor/lib64/ese_client.so
