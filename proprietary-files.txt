@@ -14,7 +14,6 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/dirac_resource.dar
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -425,10 +424,7 @@ vendor/lib64/libpvr.so
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
-vendor/firmware/a630_zap.b01
 vendor/firmware/a630_zap.b02
-vendor/firmware/a630_zap.elf
-vendor/firmware/a630_zap.mdt
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so
@@ -572,12 +568,9 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
 
 # IRQ balance
 vendor/bin/msm_irqbalance
@@ -617,9 +610,7 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hvx.so
 
 # NFC
-vendor/etc/libnfc-nxp_RF.conf:vendor/libnfc-nxp_RF.conf
 vendor/etc/libese-nxp.conf
-vendor/etc/libnfc-nxp.conf
 vendor/lib/libpn553_fw.so
 
 # OMX
