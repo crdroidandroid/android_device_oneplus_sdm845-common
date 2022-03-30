@@ -16,5 +16,11 @@
     "repository": "crdroidandroid/proprietary_vendor_oneplus_op6",
     "target_path": "vendor/oneplus",
     "branch": "12.1"
+  },
+  {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/android_vendor_oneplus_apps",
+    "target_path": "vendor/oneplus/apps",
+    "branch": "12.1"
   }
 ]

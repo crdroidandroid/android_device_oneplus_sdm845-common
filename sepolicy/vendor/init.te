@@ -5,5 +5,6 @@ allow init op2_file:dir mounton;
 
 allow init socket_device:sock_file { unlink setattr create };
 
+allow init sysfs_battery_supply:file { setattr };
 allow init sysfs_dm:file { setattr };
 allow init sysfs_livedisplay_tuneable:file { setattr };

@@ -13,10 +13,16 @@ ro.kernel.ebpf.supported=true
 
 # Camera
 camera.disable_zsl_mode=true
+persist.camera.assert.panic=true
+ro.com.google.lens.oem_camera_package=com.oneplus.camera
+ro.opcamera.support=true
 vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.oneplus.camera,org.codeaurora.snapcam
 
 # Charger
 ro.charger.disable_init_blank=true
+
+# Codec
+debug.stagefright.ccodec=1
 
 # CNE
 persist.vendor.cne.feature=1

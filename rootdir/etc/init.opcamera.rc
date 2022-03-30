@@ -1,0 +1,14 @@
+on init
+    setprop vendor.boot.project_name ${ro.boot.project_name}
+
+on fs
+    mkdir /mnt/vendor/dsp 0770 root root
+    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
+    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
+    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
+
+on boot
+    mkdir /data/misc/lineage 0770 cameraserver audio
+    write /data/misc/lineage/client_package_name "com.oneplus.camera"
+    chown cameraserver audio /data/misc/lineage/client_package_name
+    chmod 0644 /data/misc/lineage/client_package_name
