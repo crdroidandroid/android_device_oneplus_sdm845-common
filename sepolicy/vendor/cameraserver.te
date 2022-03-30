@@ -1,0 +1,9 @@
+allow cameraserver hal_cameraHIDL_hwservice:hwservice_manager { find };
+
+allow cameraserver lineage_data_file:dir write;
+allow cameraserver lineage_data_file:file rw_file_perms;
+
+allow cameraserver init:unix_stream_socket { connectto };
+allow cameraserver property_socket:sock_file rw_file_perms;
+
+binder_call(cameraserver, hal_cameraHIDL_default)

@@ -31,11 +31,13 @@
         <item>/system_ext/priv-app/LineageParts/LineageParts.apk</item>
         <item>/system_ext/priv-app/DeviceExtras/DeviceExtras.apk</item>
         <item>/system_ext/priv-app/DeviceExtras/DeviceExtras.apk</item>
+        <item>/system_ext/priv-app/DeviceExtras/DeviceExtras.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
+        <item>org.lineageos.oneplus.DeviceExtras.camera.KeyHandler</item>
         <item>org.lineageos.oneplus.DeviceExtras.slider.KeyHandler</item>
         <item>org.lineageos.oneplus.DeviceExtras.touch.KeyHandler</item>
     </string-array>
