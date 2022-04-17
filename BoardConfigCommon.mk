@@ -140,7 +140,7 @@ TARGET_COPY_OUT_SYSTEM := system
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+TARGET_TAP_TO_WAKE_NODE := /proc/touchpanel/double_tap_enable
 
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
