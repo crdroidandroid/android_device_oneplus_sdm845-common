@@ -1,0 +1,9 @@
+allow priv_app hal_cameraHIDL_hwservice:hwservice_manager { find };
+
+allow priv_app sysfs_battery_supply:dir r_dir_perms;
+allow priv_app sysfs_battery_supply:file rw_file_perms;
+
+binder_call(priv_app, hal_cameraHIDL_default)
+
+get_prop(priv_app, camera_prop)
+get_prop(priv_app, oneplus_camera_prop)

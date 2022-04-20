@@ -2,11 +2,19 @@
 persist.vendor.bluetooth.    u:object_r:vendor_bluetooth_prop:s0
 
 # Camera
-camera.                    u:object_r:camera_prop:s0
-persist.camera.            u:object_r:camera_prop:s0
-persist.vendor.camera.     u:object_r:camera_prop:s0
-ro.camera.                 u:object_r:camera_prop:s0
-vendor.camera.             u:object_r:camera_prop:s0
+camera.                   u:object_r:camera_prop:s0
+persist.camera.           u:object_r:camera_prop:s0
+persist.camera.assert.    u:object_r:camera_prop:s0
+persist.opcamera.         u:object_r:camera_prop:s0
+persist.vendor.camera.    u:object_r:camera_prop:s0
+ro.camera.                u:object_r:camera_prop:s0
+ro.com.google.            u:object_r:camera_prop:s0
+ro.opcamera.              u:object_r:camera_prop:s0
+vendor.camera.            u:object_r:camera_prop:s0
+
+# OnePlus Camera & Gallery
+vendor.oneplus.            u:object_r:oneplus_camera_prop:s0
+vendor.oneplus.gallery.    u:object_r:oneplus_camera_prop:s0
 
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0

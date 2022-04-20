@@ -1,2 +1,7 @@
 # Use a custom app domain for oneplus camera
-user=_app isPrivApp=true seinfo=oneplus name=com.oneplus.camera domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.camera domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.camera:picture domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.camera.service domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.gallery domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.gallery:cloud domain=oneplus_camera_app type=app_data_file levelFrom=all
+user=_app isPrivApp=true seinfo=platform name=com.oneplus.gallery:recyclebin domain=oneplus_camera_app type=app_data_file levelFrom=all

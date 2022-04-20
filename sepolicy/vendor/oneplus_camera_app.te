@@ -1,2 +1,37 @@
 # Type define oneplus camera domain
-type oneplus_camera_app, domain, coredomain;
+type oneplus_camera_app, domain;
+app_domain(oneplus_camera_app)
+
+allow oneplus_camera_app self:udp_socket { bind connect create getattr getopt read setopt write };
+
+allow oneplus_camera_app app_data_file:dir { getattr search };
+allow oneplus_camera_app app_data_file:file { execute };
+allow oneplus_camera_app dnsproxyd_socket:sock_file { write };
+allow oneplus_camera_app netd:unix_stream_socket { connectto };
+allow oneplus_camera_app node:udp_socket { node_bind };
+allow oneplus_camera_app privapp_data_file:file { execute };
+allow oneplus_camera_app sysfs_battery_supply:dir r_dir_perms;
+allow oneplus_camera_app sysfs_battery_supply:file rw_file_perms;
+
+dontaudit oneplus_camera_app default_prop:file { read };
+dontaudit oneplus_camera_app system_file:file { lock };
+
+## Setting hal_client_domain and binder_call to hal_camera
+## will route everything through the HAL instead of keeping
+## the app sepolicy isolated. Requires substantial rework.
+
+#hal_client_domain(oneplus_camera_app, hal_camera)
+hal_client_domain(oneplus_camera_app, hal_cameraHIDL)
+
+#binder_call(oneplus_camera_app, hal_camera_default)
+binder_call(oneplus_camera_app, hal_cameraHIDL_default)
+
+allow oneplus_camera_app { activity_service activity_task_service audio_service audioserver_service autofill_service cameraserver_service content_capture_service device_state_service game_service gpu_service hint_service legacy_permission_service location_service media_communication_service media_session_service mediaextractor_service mediametrics_service mediaserver_service nfc_service package_native_service radio_service sensorservice_service shortcut_service surfaceflinger_service thermal_service trust_service usb_service wifi_service }:service_manager find;
+
+allow oneplus_camera_app hal_cameraHIDL_hwservice:hwservice_manager { find };
+
+get_prop(oneplus_camera_app, camera_config_prop)
+get_prop(oneplus_camera_app, camera_prop)
+get_prop(oneplus_camera_app, vendor_default_prop)
+
+set_prop(oneplus_camera_app, oneplus_camera_prop)
