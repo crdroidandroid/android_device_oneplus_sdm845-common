@@ -4,6 +4,7 @@ persist.vendor.bluetooth.    u:object_r:vendor_bluetooth_prop:s0
 # Camera
 camera.                    u:object_r:camera_prop:s0
 persist.camera.            u:object_r:camera_prop:s0
+persist.opcamera           u:object_r:camera_prop:s0
 persist.vendor.camera.     u:object_r:camera_prop:s0
 ro.camera.                 u:object_r:camera_prop:s0
 vendor.camera.             u:object_r:camera_prop:s0
