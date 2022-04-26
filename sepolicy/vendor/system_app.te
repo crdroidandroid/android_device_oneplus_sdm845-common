@@ -1,12 +1,14 @@
 typeattribute system_app system_writes_vendor_properties_violators;
 
-set_prop(system_app, vendor_nfc_prop)
-
 allow system_app sysfs_dm:dir r_dir_perms;
 allow system_app sysfs_dm:file rw_file_perms;
 
 allow system_app sysfs_fastcharge:dir r_dir_perms;
 allow system_app sysfs_fastcharge:file rw_file_perms;
+
+allow system_app proc_pagetypeinfo:file rw_file_perms;
+
+allow system_app proc_vmallocinfo:file rw_file_perms;
 
 allow system_app sysfs_graphics:dir r_dir_perms;
 allow system_app sysfs_graphics:{ file lnk_file } rw_file_perms;
@@ -33,3 +35,8 @@ allow system_app sysfs_usb_supply:file rw_file_perms;
 
 allow system_app sysfs_workqueue:dir r_dir_perms;
 allow system_app sysfs_workqueue:file rw_file_perms;
+
+allow system_app sysfs_zram:dir { search };
+allow system_app sysfs_zram:file rw_file_perms;
+
+set_prop(system_app, vendor_nfc_prop)
