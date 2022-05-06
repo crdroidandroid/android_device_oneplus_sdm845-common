@@ -209,10 +209,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.0.vendor \
     vendor.oneplus.hardware.display@1.0.vendor
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -354,6 +350,9 @@ PRODUCT_PACKAGES += \
     libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor
+
+# Quick Tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # RIL
 PRODUCT_PACKAGES += \
