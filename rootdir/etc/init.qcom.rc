@@ -280,12 +280,6 @@ on boot
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
 
-    # Sound Control
-    chown system system /sys/kernel/sound_control/earpiece_gain
-    chmod 0666 /sys/kernel/sound_control/earpiece_gain
-    chown system system /sys/kernel/sound_control/mic_gain
-    chmod 0666 /sys/kernel/sound_control/mic_gain
-
     # Tri-state-key
     chown system system /sys/devices/platform/soc/soc:tri_state_key/tri_state
     chmod 0666 /sys/devices/platform/soc/soc:tri_state_key/tri_state
@@ -550,6 +544,12 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wcd_cpe0/fw_name
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
+
+    # Sound Control
+    chown system audio /sys/kernel/sound_control/earpiece_gain
+    chmod 0666 /sys/kernel/sound_control/earpiece_gain
+    chown system audio /sys/kernel/sound_control/mic_gain
+    chmod 0666 /sys/kernel/sound_control/mic_gain
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
