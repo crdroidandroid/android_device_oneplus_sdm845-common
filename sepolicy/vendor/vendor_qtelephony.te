@@ -1,1 +1,4 @@
+allow vendor_qtelephony hal_telephony_hwservice:hwservice_manager find;
+allow vendor_qtelephony init:unix_stream_socket { connectto };
+allow vendor_qtelephony property_socket:sock_file { write };
 set_prop(vendor_qtelephony, radio_prop)
