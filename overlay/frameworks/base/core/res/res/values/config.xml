@@ -431,6 +431,23 @@
     <!-- Whether key handler sends intent when changing slider position -->
     <string name="config_alertSliderIntent">org.lineageos.oneplus.DeviceExtras.slider.UPDATE_SLIDER_POSITION</string>
 
+    <!-- These are system packages exempted from privacy indicator -->
+    <string-array name="config_indicatorExemptedPackageNames" translatable="false">
+        <item>com.android.bluetooth</item>
+        <item>com.android.phone</item>
+        <item>com.android.networkstack.tethering</item>
+        <item>com.android.systemui</item>
+        <item>com.google.android.settings.intelligence</item>
+        <item>com.crdroid.faceunlock</item>
+        <item>com.qualcomm.qti.cne</item>
+        <item>com.shannon.imsservice</item>
+        <item>org.microg.nlp.backend.apple</item>
+        <item>org.fitchfamily.android.dejavu</item>
+        <item>org.fitchfamily.android.gsmlocation</item>
+        <item>org.microg.nlp.backend.ichnaea</item>
+        <item>org.fitchfamily.android.wifi_backend</item>
+    </string-array>
+
 <!-- The following flags are currently dead, but, maybe they'll be back someday -->
 
     <!-- Smart charging
