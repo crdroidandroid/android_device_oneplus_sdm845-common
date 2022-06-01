@@ -1,0 +1,1 @@
+allow wifidisplayhalservice_qti self:capability { net_raw };

@@ -23,9 +23,6 @@ vendor.camera.aux.packagelist=com.google.android.GoogleCamera,com.oneplus.camera
 # Charger
 ro.charger.disable_init_blank=true
 
-# Codec
-debug.stagefright.ccodec=1
-
 # CNE
 persist.vendor.cne.feature=1
 
