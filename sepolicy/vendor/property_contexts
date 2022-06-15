@@ -13,14 +13,22 @@ vendor.camera.             u:object_r:camera_prop:s0
 # Debug
 gf.debug.    u:object_r:debug_prop:s0
 
+# DPMD
+persist.vendor.dpmhalservice.    u:object_r:vendor_persist_dpm_prop:s0
+
 # NFC
+persist.factoryota.           u:object_r:vendor_nfc_prop:s0
 persist.nfc.                  u:object_r:nfc_nq_prop:s0
 persist.vendor.nfc.           u:object_r:vendor_nfc_prop:s0
 persist.vendor.oem.nfc.rf.    u:object_r:nfc_nq_prop:s0
+ro.nfc.                       u:object_r:vendor_nfc_prop:s0
 vendor.oem.nfc.rf.card.       u:object_r:nfc_nq_prop:s0
 
 # Power HAL
 vendor.powerhal.             u:object_r:vendor_power_prop:s0
+
+# QMI
+persist.vendor.data.qmipriod_load    u:object_r:vendor_data_qmipriod_prop:s0
 
 # WiFi
 vendor.wlan.driver.version      u:object_r:vendor_wifi_version:s0

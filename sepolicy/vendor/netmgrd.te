@@ -1,0 +1,5 @@
+allow netmgrd init:unix_stream_socket { connectto };
+
+allow netmgrd property_socket:sock_file { write };
+
+set_prop(netmgrd, vendor_data_qmipriod_prop)

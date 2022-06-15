@@ -17,12 +17,17 @@ allow hal_camera_default persist_file:file create_file_perms;
 allow hal_camera_default proc_meminfo:file r_file_perms;
 
 allow hal_camera_default sysfs_net:dir { search };
+allow hal_camera_default sysfs_net:file { open read };
 
 allow hal_camera_default vendor_camera_data_file:dir create_dir_perms;
 
 allow hal_camera_default xdsp_device:chr_file r_file_perms;
 
 #binder_call(hal_camera_default, oneplus_camera_app)
+
+dontaudit hal_camera_default self:tcp_socket { create };
+
+dontaudit hal_camera_default vendor_shell_exec:file { execute_no_trans };
 
 get_prop(hal_camera_default, ctl_default_prop)
 get_prop(hal_camera_default, vendor_mmi_prop)

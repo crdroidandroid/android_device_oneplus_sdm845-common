@@ -1,0 +1,1 @@
+init.svc.recovery    u:object_r:exported3_system_prop:s0 exact string
