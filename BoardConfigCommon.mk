@@ -46,6 +46,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.configfs=true \
     androidboot.hardware=qcom \
     androidboot.usbcontroller=a600000.dwc3 \
+    cgroup_disable=pressure \
     ehci-hcd.park=3 \
     firmware_class.path=/vendor/firmware_mnt/image \
     kpti=off \
