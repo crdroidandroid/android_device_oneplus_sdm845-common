@@ -22,5 +22,11 @@
     "repository": "crdroidandroid/android_vendor_onpelus_apps",
     "target_path": "vendor/oneplus/apps",
     "branch": "11.0"
+  },
+  {
+    "remote": "crdroid",
+    "repository": "Terminator-J/vendor_ih8sn",
+    "target_path": "vendor/ih8sn",
+    "branch": "12.1-test"
   }
 ]
