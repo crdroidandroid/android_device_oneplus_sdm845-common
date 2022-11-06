@@ -11,5 +11,10 @@
     "remote": "crdroid-gitlab",
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sdm845-common",
     "target_path": "vendor/oneplus/sdm845-common"
+  },
+  {
+    "repository": "Terminator-J/vendor_ih8sn",
+    "target_path": "vendor/ih8sn",
+    "branch": "13.0-test"
   }
 ]
