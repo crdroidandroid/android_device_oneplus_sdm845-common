@@ -7,6 +7,7 @@ ro.kernel.ebpf.supported=true
 # Camera
 camera.disable_zsl_mode=true
 persist.camera.assert.panic=true
+persist.vendor.camera.sceneclassify.enable=0
 ro.opcamera.support=true
 
 # Charger
