@@ -1,0 +1,2 @@
+allow hal_neuralnetworks_default public_adsprpcd_file:file r_file_perms;
+get_prop(hal_neuralnetworks_default, vendor_camera_prop)
