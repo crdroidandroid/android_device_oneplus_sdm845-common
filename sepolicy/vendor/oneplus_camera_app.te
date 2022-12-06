@@ -1,0 +1,69 @@
+# Type define oneplus camera domain
+type oneplus_camera_app, domain;
+app_domain(oneplus_camera_app)
+
+allow oneplus_camera_app self:udp_socket { bind connect create getattr getopt read setopt write };
+
+allow oneplus_camera_app {
+    activity_service
+    activity_task_service
+    audio_service
+    audioserver_service
+    autofill_service
+    batteryproperties_service
+    batterystats_service
+    cameraserver_service
+    content_capture_service
+    device_state_service
+    game_service
+    gpu_service
+    hint_service
+    legacy_permission_service
+    location_service
+    media_communication_service
+    media_session_service
+    mediaextractor_service
+    mediametrics_service
+    mediaserver_service
+    netstats_service
+    nfc_service
+    package_native_service
+    radio_service
+    sensorservice_service
+    shortcut_service
+    surfaceflinger_service
+    thermal_service
+    trust_service
+    usb_service
+    wifi_service
+  }:service_manager find;
+
+allow oneplus_camera_app app_data_file:dir { getattr search };
+allow oneplus_camera_app app_data_file:file { execute };
+
+allow oneplus_camera_app dnsproxyd_socket:sock_file { write };
+
+allow oneplus_camera_app fwmarkd_socket:sock_file { write };
+
+allow oneplus_camera_app hal_cameraHIDL_hwservice:hwservice_manager { find };
+
+allow oneplus_camera_app netd:unix_stream_socket { connectto };
+
+allow oneplus_camera_app node:udp_socket { node_bind };
+
+allow oneplus_camera_app port:tcp_socket { name_connect };
+
+allow oneplus_camera_app privapp_data_file:file { execute };
+
+allow oneplus_camera_app sysfs_battery_supply:dir r_dir_perms;
+allow oneplus_camera_app sysfs_battery_supply:file rw_file_perms;
+
+allow oneplus_camera_app system_server:binder { call transfer };
+allow oneplus_camera_app system_server:unix_stream_socket { read write };
+
+allow oneplus_camera_app surfaceflinger:binder { call transfer };
+allow oneplus_camera_app surfaceflinger:unix_stream_socket { read write };
+
+binder_call(oneplus_camera_app, hal_cameraHIDL_default)
+
+get_prop(oneplus_camera_app, vendor_camera_prop)

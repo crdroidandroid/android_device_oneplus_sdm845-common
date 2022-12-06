@@ -1,0 +1,8 @@
+binder_call(cameraserver, hal_cameraHIDL_default)
+
+binder_call(cameraserver, oneplus_camera_app)
+
+allow cameraserver camera_data_file:dir write;
+allow cameraserver camera_data_file:file rw_file_perms;
+
+allow cameraserver hal_cameraHIDL_hwservice:hwservice_manager { find };

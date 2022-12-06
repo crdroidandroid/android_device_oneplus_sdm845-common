@@ -1,3 +1,11 @@
 hal_client_domain(platform_app, hal_ifaa)
 
+allow platform_app app_data_file:dir r_dir_perms;
+#allow platform_app app_data_file:file { execute };
+
+allow platform_app sysfs_battery_supply:dir r_dir_perms;
+allow platform_app sysfs_battery_supply:file r_file_perms;
+
 binder_call(platform_app, hal_ifaa_default)
+
+get_prop(platform_app, vendor_camera_prop)

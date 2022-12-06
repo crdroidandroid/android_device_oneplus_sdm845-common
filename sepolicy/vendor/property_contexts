@@ -2,7 +2,15 @@
 persist.vendor.bluetooth.    u:object_r:vendor_bluetooth_prop:s0
 
 # Camera
-persist.camera.trace    u:object_r:vendor_camera_prop:s0
+persist.camera.assert.    u:object_r:vendor_camera_prop:s0
+persist.camera.trace      u:object_r:vendor_camera_prop:s0
+persist.opcamera.         u:object_r:vendor_camera_prop:s0
+persist.vendor.camera.    u:object_r:vendor_camera_prop:s0
+ro.camera.                u:object_r:vendor_camera_prop:s0
+ro.opcamera.              u:object_r:vendor_camera_prop:s0
+vendor.camera.            u:object_r:vendor_camera_prop:s0
+vendor.oneplus.           u:object_r:vendor_camera_prop:s0
+zeroth.debuglog.          u:object_r:vendor_camera_prop:s0
 
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0

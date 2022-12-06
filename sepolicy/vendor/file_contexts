@@ -22,7 +22,10 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/spunvm                  u:object_r:efs_boot_dev:s0
 
 # Block IO
-/dev/blkio(/.*)?                                                       u:object_r:blkio_file:s0
+/dev/blkio(/.*)?    u:object_r:blkio_file:s0
+
+# Data files
+/data/misc/camera/client_package_name    u:object_r:camera_data_file:s0
 
 # Devices
 /dev/dash                 u:object_r:dash_device:s0
@@ -52,6 +55,9 @@
 # OP1, OP2 files
 /mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
 /mnt/vendor/op2(/.*)?    u:object_r:op2_file:s0
+
+# Persist files
+/mnt/vendor/persist/camera(/.*)?    u:object_r:oem_file:s0
 
 # Sys files
 /sys/bus/platform/devices/soc/soc:tri_state_key/tri_state    u:object_r:sysfs_tri_state_key:s0
