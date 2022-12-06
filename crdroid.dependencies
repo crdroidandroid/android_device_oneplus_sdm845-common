@@ -14,6 +14,11 @@
     "target_path": "vendor/oneplus/sdm845-common"
   },
   {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/android_vendor_oneplus_apps",
+    "target_path": "vendor/oneplus/apps"
+  },
+  {
     "repository": "Terminator-J/vendor_ih8sn",
     "target_path": "vendor/ih8sn",
     "branch": "13.0-test"

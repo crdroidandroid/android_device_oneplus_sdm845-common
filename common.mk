@@ -352,6 +352,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk
 
+# OnePlus Camera
+PRODUCT_PACKAGES += \
+    vendor.oneplus.hardware.camera-V1.0-java \
+    vendor.oneplus.hardware.CameraMDMHIDL-V1.0-java
+
+$(call inherit-product-if-exists, vendor/oneplus/apps/sdm845/config.mk)
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \

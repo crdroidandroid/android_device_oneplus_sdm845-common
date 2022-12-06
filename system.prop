@@ -4,8 +4,16 @@ ro.build.ab_update=true
 # BPF
 ro.kernel.ebpf.supported=true
 
+# Camera
+camera.disable_zsl_mode=true
+persist.camera.assert.panic=true
+ro.opcamera.support=true
+
 # Charger
 ro.charger.disable_init_blank=true
+
+# Codec
+debug.stagefright.ccodec=1
 
 # CNE
 persist.vendor.cne.feature=1
