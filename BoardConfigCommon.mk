@@ -95,6 +95,9 @@ USE_CUSTOM_AUDIO_POLICY := 1
 # Bluetooth
 TARGET_USE_QTI_BT_STACK := true
 
+# Camera
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 # Display
 TARGET_USES_FOD_ZPOS := true
 TARGET_USES_GRALLOC1 := true
