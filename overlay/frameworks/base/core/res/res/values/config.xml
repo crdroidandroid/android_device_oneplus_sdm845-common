@@ -398,4 +398,10 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Parallel space blocklist -->
+    <string-array name="config_parallelSpaceBlocklist">
+        <item>org.lineageos.settings.device</item>
+        <item>org.lineageos.oneplus.DeviceExtras</item>
+    </string-array>
 </resources>
