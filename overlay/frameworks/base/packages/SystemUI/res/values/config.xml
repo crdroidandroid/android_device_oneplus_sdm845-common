@@ -32,4 +32,7 @@
 
     <!-- FPSInfoService FPS node file path -->
     <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
+
+    <!-- If true, the statusbar & nav bar will also be shifted around. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>

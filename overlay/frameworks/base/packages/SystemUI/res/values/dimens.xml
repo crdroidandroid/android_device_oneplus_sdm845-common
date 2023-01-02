@@ -20,6 +20,13 @@
 
 <resources>
 
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">5.5dp</dimen>
+    <!-- holy crap it's actually working right in A14 and not being doubled -->
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">80.0px</dimen>
+
     <!-- Tri-state UI -->
     <dimen name="tri_state_down_dialog_position">423.0px</dimen>
     <dimen name="tri_state_down_dialog_position_l">270.375px</dimen>
