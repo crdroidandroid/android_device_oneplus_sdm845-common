@@ -20,6 +20,12 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">3.1dp</dimen>
+
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">80.0px</dimen>
+
     <!-- Tri-state UI -->
     <dimen name="tri_state_down_dialog_position">423.0px</dimen>
     <dimen name="tri_state_down_dialog_position_l">270.375px</dimen>
@@ -29,5 +35,4 @@
     <dimen name="tri_state_up_dialog_position_l">270.375px</dimen>
     <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
     <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
-
 </resources>
