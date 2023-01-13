@@ -45,4 +45,7 @@
 
     <!-- If true, the statusbar & nav bar will also be shifted around. -->
     <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Update battery info every second when device is charging -->
+    <bool name="config_alternateFastchargeInfoUpdate">true</bool>
 </resources>
