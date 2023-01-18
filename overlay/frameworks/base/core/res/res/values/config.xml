@@ -360,6 +360,9 @@
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
+    <!-- Whether or not to enable the lock screen entry point for the QR code scanner. -->
+    <bool name="config_enableQrCodeScannerOnLockScreen">true</bool>
+
 <!-- crDroid-specific customizations below -->
 <!--
      Copyright (C) 2016-2021 crDroid Android Project
