@@ -430,7 +430,8 @@ vendor/firmware/a630_zap.mdt|94968ad31f87d3f487cc5d1790894de7937960ae
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# GNSS
+# GNSS / GPS
+vendor/app/CACertService/CACertService.apk
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
