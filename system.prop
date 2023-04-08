@@ -7,6 +7,9 @@ persist.sys.bootanim.play_sound=true
 # BPF
 ro.kernel.ebpf.supported=true
 
+# Camera
+log.tag.CHIUSECASE=ERROR
+
 # CNE
 persist.vendor.cne.feature=1
 

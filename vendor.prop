@@ -106,6 +106,7 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
+persist.vendor.camera.logInfoMask=false
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 vendor.camera.aux.packagelist=com.oneplus.camera,com.oneplus.camera.service,org.lineageos.aperture
 
