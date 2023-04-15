@@ -33,6 +33,8 @@ allow hal_camera_default xdsp_device:chr_file r_file_perms;
 
 dontaudit hal_camera_default default_prop:file read;
 
+allow hal_camera_default sysfs:file { read open };
+
 dontaudit hal_camera_default default_prop:file read;
 
 get_prop(hal_camera_default, ctl_default_prop)
