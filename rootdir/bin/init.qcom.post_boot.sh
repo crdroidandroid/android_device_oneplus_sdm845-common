@@ -5966,7 +5966,6 @@ case "$target" in
     ;;
     "msm8974")
         start mpdecision
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
     "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe" | "sm6150" | "kona" | "lito" | "trinket" | "atoll" | "bengal" | "sdmshrike")
         setprop vendor.post_boot.parsed 1
@@ -5974,15 +5973,6 @@ case "$target" in
     "apq8084")
         rm /data/system/perfd/default_values
         start mpdecision
-        echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-        echo 512 > /sys/block/sda/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdb/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdc/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdd/bdi/read_ahead_kb
-        echo 512 > /sys/block/sde/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdf/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdg/bdi/read_ahead_kb
-        echo 512 > /sys/block/sdh/bdi/read_ahead_kb
     ;;
     "msm7627a")
         if [ -f /sys/devices/soc0/soc_id ]; then
