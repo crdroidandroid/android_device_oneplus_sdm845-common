@@ -118,6 +118,9 @@ vendor.camera.skip_unconfigure.packagelist=com.oneplus.camera
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM845
 
+# CNSS
+persist.vendor.cnss-daemon.kmsg_logging=0
+
 # Dex
 dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7
 dalvik.vm.boot-dex2oat-threads=7
