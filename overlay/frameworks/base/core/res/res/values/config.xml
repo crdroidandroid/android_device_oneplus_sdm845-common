@@ -372,6 +372,9 @@
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
 
+    <!-- Default value for performant auth feature. -->
+    <bool name="config_performantAuthDefault">true</bool>
+
 <!--
      Copyright (C) 2016-2025, crDroid Android Project
 -->
