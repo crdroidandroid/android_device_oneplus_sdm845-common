@@ -367,6 +367,9 @@
          minor revisions. -->
     <bool name="config_faceAuthSupportsSelfIllumination">false</bool>
 
+    <!-- Default value for performant auth feature. -->
+    <bool name="config_performantAuthDefault">true</bool>
+
 <!--
      Copyright (C) 2016-2023 crDroid Android Project
 
