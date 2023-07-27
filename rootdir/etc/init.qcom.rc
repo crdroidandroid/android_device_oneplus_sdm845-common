@@ -93,7 +93,8 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_cdsp/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
-    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    # exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    start qcom-early-boot
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
@@ -646,6 +647,12 @@ service qcom-sh /vendor/bin/init.qcom.sh
 #    class late_start
 #    user root
 #    oneshot
+
+service qcom-early-boot /vendor/bin/sh /vendor/bin/init.qcom.early_boot.sh
+    user root
+    disabled
+    oneshot
+    seclabel u:r:vendor_qti_init_shell:s0
 
 service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     class late_start
