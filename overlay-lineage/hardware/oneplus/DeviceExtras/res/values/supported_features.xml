@@ -62,7 +62,7 @@
     <bool name="config_deviceSupportsGPUThrottling">true</bool>
 
     <!-- Whether device supports Power Efficient Workqueue -->
-    <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
+    <bool name="config_deviceSupportsPowerEfficientWorkqueue">false</bool>
 
     <!-- Whether device supports Touch Screen Gestures -->
     <bool name="config_deviceSupportsTouchScreenGestures">false</bool>
