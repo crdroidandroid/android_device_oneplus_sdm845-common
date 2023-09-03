@@ -20,5 +20,5 @@ get_prop(hal_pasrmanager_memory_qti, vendor_pasr_prop)
 
 allow hal_pasrmanager_memory_qti sysfs:dir { read };
 
-allow hal_pasrmanager_memory_qti default_android_hwservice:hwservice_manager { add find };
+#allow hal_pasrmanager_memory_qti default_android_hwservice:hwservice_manager { add find };
 allow hal_pasrmanager_memory_qti hal_pasrmanager_memory_hwservice:hwservice_manager { add find };
