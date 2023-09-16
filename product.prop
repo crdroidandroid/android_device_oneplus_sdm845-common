@@ -20,3 +20,6 @@ ro.lmk.swap_free_low_percentage=5
 ro.lmk.psi_partial_stall_ms=70
 ## real world ratio seems to average over 4, trying 0 resulted in lmkd just not really doing anything and then oom_reaper jumped in
 ro.lmk.swap_compression_ratio=4
+
+# Logs
+persist.log.tag.OpenGLRenderer=S
