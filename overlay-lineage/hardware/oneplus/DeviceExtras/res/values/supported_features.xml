@@ -18,6 +18,9 @@
 <!-- These resources are around just to allow their values to be customized
      for different OnePlus serires/devices.  Do not translate. -->
 <resources>
+    <!-- Whether device supports Adreno Boost -->
+    <bool name="config_deviceSupportsGPUBoost">true</bool>
+
     <!-- Whether device supports Adreno GPU Throttling -->
     <bool name="config_deviceSupportsGPUThrottling">true</bool>
 
