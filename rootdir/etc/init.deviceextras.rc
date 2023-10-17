@@ -42,6 +42,10 @@ on post-fs
 
 on early-boot
 
+    # Adreno GPU Boost
+    chown system graphics /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost
+    chmod 0666 /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost
+
     # Adreno GPU Throttling
     chown system graphics /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/kgsl/kgsl-3d0/throttling
     chmod 0666 /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/kgsl/kgsl-3d0/throttling
