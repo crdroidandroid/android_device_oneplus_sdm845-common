@@ -18,6 +18,8 @@
 <!-- These resources are around just to allow their values to be customized
      for different OnePlus serires/devices.  Do not translate. -->
 <resources>
+    <!-- Adreno Boost sysfs node path -->
+    <string name="node_gpu_boost_preference">/sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost</string>
 
     <!-- Ear gain sysfs node path -->
     <string name="node_ear_gain_preference">/sys/kernel/sound_control/earpiece_gain</string>
