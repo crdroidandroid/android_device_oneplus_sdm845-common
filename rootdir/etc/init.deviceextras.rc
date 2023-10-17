@@ -44,6 +44,10 @@ on post-fs
 
 on boot
 
+    # Adreno GPU Boost
+    chown system graphics /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost
+    chmod 0666 /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost
+
     # Adreno GPU Throttling
     ## Step 1 - Assert dominance
     write /sys/devices/platform/soc/5000000.qcom,kgsl-3d0/kgsl/kgsl-3d0/throttling 0
