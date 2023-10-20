@@ -27,11 +27,11 @@
 
 #ifdef VENDOR_EDIT
 import /vendor/etc/init/hw/init.oem.rc
+import /vendor/etc/init/hw/init.deviceextras.rc
 #endif VENDOR_EDIT
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.deviceextras.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug

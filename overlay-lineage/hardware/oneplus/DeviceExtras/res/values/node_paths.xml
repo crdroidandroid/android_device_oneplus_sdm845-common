@@ -41,7 +41,7 @@
     <string name="node_gpu_boost_preference">/sys/devices/platform/soc/5000000.qcom,kgsl-3d0/devfreq/5000000.qcom,kgsl-3d0/adrenoboost</string>
 
     <!-- Adreno GPU Throttling sysfs node path -->
-    <string name="node_gpu_throttling_mode_switch">/sys/devices/platform/soc/5000000.qcom,kgsl-3d0/kgsl/kgsl-3d0/throttling</string>
+    <string name="node_gpu_throttling_mode_switch">/sys/class/kgsl/kgsl-3d0/throttling</string>
 
     <!-- Power Efficient Workqueue sysfs node path -->
     <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
