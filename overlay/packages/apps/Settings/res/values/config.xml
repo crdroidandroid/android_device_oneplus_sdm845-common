@@ -33,4 +33,25 @@
          should be either LOW (1) or HIGH (3).
     -->
     <integer name="config_vibration_supported_intensity_levels">1</integer>
+
+    <!-- Custom pickup sensor for doze customization -->
+    <string name="pickup_sensor" translatable="false">oneplus.sensor.op_motion_detect</string>
+
+    <!-- Minimum interval (in milliseconds) needed to trigger doze pulsing
+         on "Pickup up" gesture.
+         Default: 2500 milliseconds (2.5 seconds * 1000) -->
+    <integer name="config_dozePulsePickup_MinPulseIntervalMs">600</integer>
+
+    <!-- Maximum time (in nanoseconds) for the hand to cover the proximity sensor
+         to trigger doze pulsing on "Hand wave" gesture.
+         Default: 1000000000 nanoseconds (1 second * 1000 * 1000 * 1000) -->
+    <integer name="config_dozePulseProximity_HandwaveMaxDeltaNs">350000000</integer>
+
+    <!-- Minimum interval (in milliseconds) needed to trigger doze pulsing
+         on "Tilt" gesture.
+         Default: 2500 milliseconds (2.5 seconds * 1000) -->
+    <integer name="config_dozePulseTilt_MinPulseIntervalMs">600</integer>
+
+    <!-- Sensor trigger values -->
+    <item name="pickup_sensor_value" format="float" type="dimen">1.0</item>
 </resources>
