@@ -17,19 +17,16 @@
 
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
+
 <resources>
-    <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">false</bool>
 
-    <!-- The CPU temperature sensor path, defaults to empty -->
-    <string name="config_cpuTempSensor" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
-
-    <!-- The CPU temperature divider, if needed -->
-    <integer name="config_cpuTempDivider" translatable="false">1000</integer>
-
-    <!-- Update battery info every second when device is charging -->
-    <bool name="config_alternateFastchargeInfoUpdate">true</bool>
-
-    <!-- FPSInfoService FPS node file path -->
-    <string name="config_fpsInfoSysNode" translatable="false">/sys/class/drm/sde-crtc-0/measured_fps</string>
+    <!-- Tri-state UI -->
+    <dimen name="tri_state_down_dialog_position">423.0px</dimen>
+    <dimen name="tri_state_down_dialog_position_l">270.375px</dimen>
+    <dimen name="tri_state_middle_dialog_position">296.0px</dimen>
+    <dimen name="tri_state_middle_dialog_position_l">270.375px</dimen>
+    <dimen name="tri_state_up_dialog_position">165.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_l">270.375px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
+    <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
 </resources>
