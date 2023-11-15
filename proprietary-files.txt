@@ -1196,3 +1196,7 @@ vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
 # WiFi Display (vendor) - from lemonadep - TP1A.220624.003
 vendor/etc/wfdconfig.xml|4f863ac9a71bafff8afc14e8fab26af979bbb1d6
+
+# Audio (Spatial Audio) - from cheetah - TQ3A.230705.001
+vendor/lib/soundfx/libspatialaudio.so
+vendor/lib64/soundfx/libspatialaudio.so
