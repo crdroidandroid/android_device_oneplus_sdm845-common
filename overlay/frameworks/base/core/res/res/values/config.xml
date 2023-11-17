@@ -356,6 +356,11 @@
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
+    <!-- True if the sensor is able to provide self illumination in dark secnarios, without support
+         from above the HAL. This configuration is only applicable to IBiometricsFace@1.0 and its
+         minor revisions. -->
+    <bool name="config_faceAuthSupportsSelfIllumination">false</bool>
+
 <!--
      Copyright (C) 2016-2023 crDroid Android Project
 
