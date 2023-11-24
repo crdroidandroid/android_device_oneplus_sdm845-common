@@ -14,7 +14,7 @@ vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 # ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
 vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
-vendor/lib/rfsa/adsp/dirac_resource.dar
+vendor/lib/rfsa/adsp/dirac_resource.dar|3827352dddc20125937a0c0eabd4e56134e05144
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_skel.so
 vendor/lib/rfsa/adsp/libVC1Dec.so
 vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
@@ -419,10 +419,10 @@ vendor/lib64/libpvr.so
 vendor/firmware/a630_gmu.bin
 vendor/firmware/a630_sqe.fw
 vendor/firmware/a630_zap.b00
-vendor/firmware/a630_zap.b01
+vendor/firmware/a630_zap.b01|d114c7389236e913b2531a88e0729641783b642d
 vendor/firmware/a630_zap.b02
-vendor/firmware/a630_zap.elf
-vendor/firmware/a630_zap.mdt
+vendor/firmware/a630_zap.elf|f9af34b47f9ec499b4eb5fac30ec4578a76ff9ba
+vendor/firmware/a630_zap.mdt|94968ad31f87d3f487cc5d1790894de7937960ae
 
 # Graphics (Vulkan)
 vendor/lib/hw/vulkan.adreno.so
@@ -558,12 +558,12 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
-vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b01|3b22953823929aab8a5d2ef15ddac2f4a7358379
 vendor/firmware/ipa_fws.b02
 vendor/firmware/ipa_fws.b03
 vendor/firmware/ipa_fws.b04
-vendor/firmware/ipa_fws.elf
-vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_fws.elf|5344942bef1ebaf5ebbd77aee9d9d34777cd8e15
+vendor/firmware/ipa_fws.mdt|4dcb71b74fb1c5fb2b1ef449315d2de2cffad9dd
 
 # IRQ balance
 vendor/bin/msm_irqbalance
