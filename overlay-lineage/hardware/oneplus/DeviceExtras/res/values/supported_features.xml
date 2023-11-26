@@ -55,9 +55,6 @@
     <!-- Whether device supports Panel Modes -->
     <bool name="config_deviceSupportsPanelModes">false</bool>
 
-    <!-- Whether device supports Power Efficient Workqueue -->
-    <bool name="config_deviceSupportsPowerEfficientWorkqueue">true</bool>
-
     <!-- Whether device supports Touch Screen Gestures -->
     <bool name="config_deviceSupportsTouchScreenGestures">false</bool>
 
