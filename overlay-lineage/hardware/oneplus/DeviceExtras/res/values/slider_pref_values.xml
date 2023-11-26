@@ -21,12 +21,12 @@
 
     <!-- Auto HBM integers (default, min, max) -->
     <integer-array name="auto_hbm_threshold_preference_array">
-        <item>7000</item>
-        <item>0</item>
+        <item>7500</item>
+        <item>6000</item>
         <item>60000</item>
     </integer-array>
     <integer name="auto_hbm_threshold_preference_interval">500</integer>
-    <string name="auto_hbm_threshold_preference_default">7000</string>
+    <string name="auto_hbm_threshold_preference_default">7500</string>
 
     <!-- Kcal RED integers (default, min, max) -->
     <integer-array name="kcal_red_preference_array">
@@ -102,27 +102,27 @@
 
     <!-- Sys vibration integers (default, min, max) -->
     <integer-array name="vibrator_strength_preference_array">
-        <item>756</item>
-        <item>116</item>
+        <item>812</item>
+        <item>0</item>
         <item>3596</item>
     </integer-array>
-    <integer name="vibrator_strength_preference_interval">10</integer>
+    <integer name="vibrator_strength_preference_interval">116</integer>
 
     <!-- Call vibration integers (default, min, max) -->
     <integer-array name="vibrator_call_strength_preference_array">
-        <item>2086</item>
-        <item>116</item>
+        <item>2088</item>
+        <item>0</item>
         <item>3596</item>
     </integer-array>
-    <integer name="vibrator_call_strength_preference_interval">10</integer>
+    <integer name="vibrator_call_strength_preference_interval">116</integer>
 
     <!-- Notif vibration integers (default, min, max) -->
     <integer-array name="vibrator_notif_strength_preference_array">
-        <item>256</item>
-        <item>116</item>
+        <item>348</item>
+        <item>0</item>
         <item>3596</item>
     </integer-array>
-    <integer name="vibrator_notif_strength_preference_interval">10</integer>
+    <integer name="vibrator_notif_strength_preference_interval">116</integer>
 
     <!-- Vibration test pattern (1, 2) -->
     <integer-array name="test_vibration_pattern">

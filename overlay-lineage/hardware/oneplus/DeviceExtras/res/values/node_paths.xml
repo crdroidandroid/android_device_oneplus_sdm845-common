@@ -19,11 +19,8 @@
      for different OnePlus serires/devices.  Do not translate. -->
 <resources>
 
-    <!-- DC-dimming sysfs node path -->
-    <string name="node_dc_mode_switch">/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dimlayer_bl_en</string>
-
     <!-- Ear gain sysfs node path -->
-     <string name="node_ear_gain_preference">/sys/kernel/sound_control/earpiece_gain</string>
+    <string name="node_ear_gain_preference">/sys/kernel/sound_control/earpiece_gain</string>
 
     <!-- High Brightnes sysfs node path -->
     <string name="node_hbm_mode_switch">/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm</string>
@@ -33,12 +30,6 @@
 
     <!-- Mic gain sysfs node path -->
     <string name="node_mic_gain_preference">/sys/kernel/sound_control/mic_gain</string>
-
-    <!-- USB 2.0 Force fastcharge sysfs node path -->
-    <string name="node_usb2_fast_charge_mode_switch">/sys/kernel/fast_charge/force_fast_charge</string>
-
-    <!-- OTG sysfs node path -->
-    <string name="otg_mode_switch">/sys/class/power_supply/usb/otg_switch</string>
 
     <!-- Power Efficient Workqueue sysfs node path -->
     <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
