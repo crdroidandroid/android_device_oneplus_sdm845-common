@@ -52,10 +52,6 @@ on boot
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
 
-    # Power Efficient Workqueues
-    chown system system /sys/module/workqueue/parameters/power_efficient
-    chmod 0666 /sys/module/workqueue/parameters/power_efficient
-
     # Sound Control
     chown system system /sys/kernel/sound_control/earpiece_gain
     chmod 0666 /sys/kernel/sound_control/earpiece_gain
