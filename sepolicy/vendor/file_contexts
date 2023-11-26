@@ -46,7 +46,6 @@
 /sys/bus/platform/devices/soc/soc:tri_state_key/tri_state    u:object_r:sysfs_tri_state_key:s0
 /sys/devices/platform/soc/soc:tri_state_key/tri_state        u:object_r:sysfs_tri_state_key:s0
 /sys/module/msm_drm/parameters(/.*)?                         u:object_r:sysfs_dm:s0
-/sys/module/workqueue/parameters/power_efficient             u:object_r:sysfs_workqueue:s0
 /sys/project_info(/.*)?                                      u:object_r:sysfs_project_info:s0
 /sys/kernel/fast_charge/force_fast_charge                    u:object_r:sysfs_fastcharge:s0
 /sys/class/power_supply/usb/otg_switch                       u:object_r:sysfs_usb_supply:s0
