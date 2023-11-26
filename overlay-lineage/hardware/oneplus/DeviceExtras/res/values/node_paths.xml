@@ -31,9 +31,6 @@
     <!-- Mic gain sysfs node path -->
     <string name="node_mic_gain_preference">/sys/kernel/sound_control/mic_gain</string>
 
-    <!-- Power Efficient Workqueue sysfs node path -->
-    <string name="node_power_efficient_workqueue_mode_switch">/sys/module/workqueue/parameters/power_efficient</string>
-
     <!-- Call vibration sysfs node path -->
     <string name="node_vibrator_call_strength_preference">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call</string>
 
