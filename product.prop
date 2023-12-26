@@ -7,6 +7,12 @@ audio.sys.noisy.broadcast.delay=500
 audio.sys.offload.pstimeout.secs=3
 ro.af.client_heap_size_kbyte=7168
 
+# Debug
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
+ro.secure=0
+
 # LMKD
 ro.lmk.low=1001
 ro.lmk.medium=800
