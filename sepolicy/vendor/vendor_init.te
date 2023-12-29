@@ -5,4 +5,8 @@ allow vendor_init blkio_file:file w_file_perms;
 
 allow vendor_init op2_file:file create_file_perms;
 
+allow vendor_init proc_sched_boost:file w_file_perms;
+
+allow vendor_init proc_watermark_scale_factor:file w_file_perms;
+
 set_prop(vendor_init, vendor_power_prop)
