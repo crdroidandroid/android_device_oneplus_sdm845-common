@@ -1,0 +1,1 @@
+dontaudit system_server debugfs_wakeup_sources:file { read };
