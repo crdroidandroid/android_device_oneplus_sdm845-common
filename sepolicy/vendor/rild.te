@@ -13,4 +13,5 @@ allow rild vendor_data_file:dir rw_dir_perms;
 allow rild vendor_data_file:file create_file_perms;
 
 get_prop(rild, radio_prop)
+set_prop(rild, vendor_bluetooth_prop)
 get_prop(rild, vendor_oneplus_prop)
