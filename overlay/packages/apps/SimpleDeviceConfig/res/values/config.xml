@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2021 The Android Open Source Project
+<!-- Copyright (C) 2024 crDroid Android Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -15,6 +15,17 @@
     <string-array name="configs_base">
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
+
+        <!-- Set Max Cached Processes -->
+        <item>activity_manager/max_cached_processes=1024</item>
+
+        <!-- Enables proactive killing of cached apps -->
+        <item>activity_manager/proactive_kills_enabled=false</item>
+
+        <!-- Set Trim Empty time -->
+        <item>activity_manager/max_empty_time_millis=108000000L</item>
+
+        <!-- Set Freezer Timeout -->
+        <item>activity_manager/freeze_debounce_timeout=10_000L</item>
     </string-array>
 </resources>
-
