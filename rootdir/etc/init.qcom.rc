@@ -716,9 +716,6 @@ service vendor.LKCore-rel /vendor/bin/LKCore
     user system
     group system log diag
 
-on property:init.svc.vendor.charger=running
-    setprop persist.sys.usb.config mass_storage
-
 #add poweroffhandler
 service poweroffhandler /system/vendor/bin/poweroffhandler
     class core

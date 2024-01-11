@@ -165,10 +165,6 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
 
-on property:init.svc.vendor.charger=running
-    start vendor.power_off_alarm
-    setprop sys.usb.configfs 1
-
 ## import cne init file
 #on post-fs
 #    export LD_PRELOAD /vendor/lib/libNimsWrap.so
