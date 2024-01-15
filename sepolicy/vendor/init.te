@@ -3,3 +3,5 @@ allow init firmware_file:filesystem { getattr };
 allow init op1_file:dir mounton;
 allow init op2_file:dir mounton;
 #allow init sysfs_battery_supply:file { setattr };
+
+set_prop(init, vendor_camera_prop)
