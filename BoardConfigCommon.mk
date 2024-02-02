@@ -145,7 +145,7 @@ BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 4173332480 # Reserve 4MiB for overhead
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor
 
 ifneq ($(WITH_GMS),true)
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1715470336 # 1GiB from gpt system + 100MiB from gpt odm + 512MiB from gpt vendor
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1450000000 # 1GiB from gpt system + 100MiB from gpt odm + whatever is left from gpt vendor
 endif
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
