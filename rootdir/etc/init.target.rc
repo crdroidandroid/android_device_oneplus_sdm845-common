@@ -446,5 +446,8 @@ service vendor.contexthub-hal-1-0 /vendor/bin/hw/android.hardware.contexthub@1.0
 #endif
 
 on property:sys.boot_completed=1
+    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+    stop statsd
+
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
