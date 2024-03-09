@@ -18,8 +18,6 @@
 <!-- These resources are around just to allow their values to be customized
      for different OnePlus serires/devices.  Do not translate. -->
 <resources>
-    <!-- Adreno GPU Throttling sysfs node path -->
-    <string name="node_gpu_throttling_mode_switch">/sys/class/kgsl/kgsl-3d0/throttling</string>
 
     <!-- Ear gain sysfs node path -->
     <string name="node_ear_gain_preference">/sys/kernel/sound_control/earpiece_gain</string>
