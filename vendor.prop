@@ -176,6 +176,10 @@ vendor.power.pasr.enabled=false
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power
+vendor.powerhal.dalvik.vm.dex2oat-cpu-set=1,2,3,4,5,6,7
+vendor.powerhal.dalvik.vm.dex2oat-threads=7
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.data.iwlan.enable=true
