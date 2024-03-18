@@ -161,10 +161,8 @@ on enable-low-power
 
     # Runtime FS tuning: as we have init boottime setting and kernel patch setting
     # we should adjust the setting upon boot_complete for runtime performance
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/sda/queue/iostats 1
-    write /sys/block/sdf/queue/nr_requests 128
-    write /sys/block/sdf/queue/iostats 1
+    write /sys/block/sda/queue/nr_requests 64
+    write /sys/block/sdf/queue/nr_requests 64
 
     # Setup final cpuset
     write /dev/cpuset/top-app/cpus 0-7
