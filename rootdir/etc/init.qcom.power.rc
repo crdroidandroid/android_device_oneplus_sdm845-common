@@ -212,6 +212,10 @@ on enable-low-power
     write /proc/sys/vm/swappiness 100
     write /proc/sys/vm/watermark_scale_factor 1
 
+    # Setup virtual memory tunables
+    write /proc/sys/vm/oom_dump_tasks 0
+    write /proc/sys/vm/reap_mem_on_sigkill 1
+
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
