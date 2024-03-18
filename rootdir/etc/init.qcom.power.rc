@@ -205,6 +205,9 @@ on enable-low-power
     write /sys/class/drm/card0/device/idle_encoder_mask 1
     write /sys/class/drm/card0/device/idle_timeout_ms 100
 
+    # Assert dominance
+    write /sys/class/kgsl/kgsl-3d0/throttling 0
+
     # Enable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
