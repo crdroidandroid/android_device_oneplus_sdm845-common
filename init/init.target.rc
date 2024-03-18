@@ -441,9 +441,17 @@ on property:sys.boot_completed=1
     chmod 440 /proc/net/unix
 
     # ZRAM setup
-    write /proc/sys/vm/page-cluster 0
     write /sys/block/zram0/comp_algorithm zstd
     write /sys/block/zram0/use_dedup 1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
+
+    # Setup virtual memory tunables
+    write /proc/sys/vm/page-cluster 0
+    ## okay guess we should let it do that
+    write /proc/sys/vm/reap_mem_on_sigkill 1
+    ## if only we had 200, but alas and alack, 4.9.337 LTS forever
+    write /proc/sys/vm/swappiness 100
+    ## use swap harder, lest we awaken the userspace lmk demon to kill us all
+    write /proc/sys/vm/watermark_scale_factor 100
