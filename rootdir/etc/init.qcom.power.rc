@@ -185,6 +185,14 @@ on enable-low-power
     # Turn off scheduler boost at the end
     write /proc/sys/kernel/sched_boost 0
 
+    # Don't Panic!
+    write /proc/sys/kernel/panic 0
+    write /proc/sys/kernel/panic_on_oops 0
+    write /proc/sys/kernel/panic_on_warn 0
+    write /sys/module/kernel/parameters/panic 0
+    write /sys/module/kernel/parameters/panic_on_warn 0
+    write /sys/module/kernel/parameters/pause_on_oops 0
+
     # Disable CPU Retention
     write /sys/module/lpm_levels/L3/cpu0/ret/idle_enabled "N"
     write /sys/module/lpm_levels/L3/cpu1/ret/idle_enabled "N"
