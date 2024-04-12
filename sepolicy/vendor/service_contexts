@@ -1,1 +1,4 @@
 ParamService    u:object_r:oem_service:s0
+
+# Google shit
+vendor.google.google_battery.IGoogleBattery/default    u:object_r:goolag_service:s0
