@@ -33,7 +33,7 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
-system                                                  /system                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
+system                                                  /system                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta,logical,first_stage_mount
 vendor                                                  /vendor                   squashfs ro                                                  wait,slotselect,avb,logical,first_stage_mount
 vendor                                                  /vendor                   erofs   ro                                                   wait,slotselect,avb,logical,first_stage_mount
 vendor                                                  /vendor                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
