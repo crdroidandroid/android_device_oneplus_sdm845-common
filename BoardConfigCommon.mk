@@ -148,7 +148,7 @@ ifneq ($(WITH_GMS),true)
 #BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := -1
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := -1
 #BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := -1
-BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1450000000 # 1GiB from gpt system + 100MiB from gpt odm + whatever is left from gpt vendor
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 1280000000 # This ROM just keeps getting bigger... reserve ~1.2GiB for GApps, should fit crdroid-official & MindTheGapps comfortably still
 endif
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
