@@ -23,6 +23,7 @@ persist.camera.param.orientation         u:object_r:vendor_camera_prop:s0
 persist.camera.fd.dump                   u:object_r:vendor_camera_prop:s0
 persist.camera.fixlens                   u:object_r:vendor_camera_prop:s0
 persist.opcamera.                        u:object_r:vendor_camera_prop:s0
+persist.sys.onepluseis.                  u:object_r:vendor_camera_prop:s0
 persist.vendor.camera.                   u:object_r:vendor_camera_prop:s0
 ro.camera.                               u:object_r:vendor_camera_prop:s0
 ro.opcamera.                             u:object_r:vendor_camera_prop:s0
