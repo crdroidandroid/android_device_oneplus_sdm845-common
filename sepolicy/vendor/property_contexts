@@ -34,6 +34,3 @@ zeroth.debuglog.                         u:object_r:vendor_camera_prop:s0
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0
 ro.nfc.port            u:object_r:vendor_nfc_prop:s0
-
-# Power HAL
-vendor.powerhal.             u:object_r:vendor_power_prop:s0
