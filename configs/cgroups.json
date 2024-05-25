@@ -1,0 +1,19 @@
+{
+  "Cgroups": [
+    {
+      "Controller": "memory",
+      "Path": "/dev/memcg",
+      "Mode": "0700",
+      "UID": "root",
+      "GID": "system",
+      "Optional": true
+    },
+    {
+      "Controller": "schedtune",
+      "Path": "/dev/stune",
+      "Mode": "0755",
+      "UID": "system",
+      "GID": "system"
+    }
+  ]
+}
