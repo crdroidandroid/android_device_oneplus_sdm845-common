@@ -47,7 +47,6 @@
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
         <item>"softap0"</item>
-        <item>"wigig0"</item>
         <item>"wifi_br0"</item>
         <item>"wlan0"</item>
         <item>"wlan1"</item>
@@ -92,10 +91,6 @@
         <item>192.168.48.254</item>
         <item>192.168.49.2</item>
         <item>192.168.49.254</item>
-        <item>192.168.50.2</item>
-        <item>192.168.50.254</item>
-        <item>192.168.51.2</item>
-        <item>192.168.51.254</item>
     </string-array>
 
      <!-- This string array should be overridden by the device to present a list of network
