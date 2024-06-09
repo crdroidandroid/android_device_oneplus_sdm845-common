@@ -87,4 +87,10 @@
 
     <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_5GHz">-57</integer>
     <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_24GHz">-60</integer>
+
+    <!-- Boolean indicating whether the device should remain connected to a network without DHCP.
+        If true, the IpClient provisioning timeout will be set to infinite, which means that the
+        connection will not be torn down if the DHCP server does not respond. As a result the device
+        will be discoverable and reachable via the local-only IPv6 address. -->
+    <bool translatable="false" name ="config_wifiRemainConnectedAfterIpProvisionTimeout">true</bool>
 </resources>
