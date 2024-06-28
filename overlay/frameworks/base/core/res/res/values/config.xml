@@ -411,4 +411,10 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Define device configs on boot -->
+    <string-array name="device_configs_override" translatable="false">
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+    </string-array>
 </resources>
