@@ -106,7 +106,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2400000
     write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 2000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 32000
 
     # Enable bus-dcvs
     write /sys/class/devfreq/soc:qcom,cpubw/governor "bw_hwmon"
