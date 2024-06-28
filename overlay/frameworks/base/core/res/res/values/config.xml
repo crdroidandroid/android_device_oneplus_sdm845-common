@@ -369,7 +369,7 @@
     <bool name="config_performantAuthDefault">true</bool>
 
 <!--
-     Copyright (C) 2016-2023 crDroid Android Project
+     Copyright (C) 2016-2024 crDroid Android Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -383,6 +383,23 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+    <!-- Define device configs on boot -->
+    <string-array name="device_configs_override">
+        <!-- ART heap compaction for cached apps -->
+        <item>activity_manager/use_compaction=true</item>
+        <!-- Set Max Cached Processes -->
+        <item>activity_manager/max_cached_processes=1024</item>
+        <!-- Enables proactive killing of cached apps -->
+        <item>activity_manager/proactive_kills_enabled=false</item>
+        <!-- Set Trim Empty time -->
+        <item>activity_manager/max_empty_time_millis=108000000L</item>
+        <!-- Set Freezer Timeout -->
+        <item>activity_manager/freeze_debounce_timeout=10_000L</item>
+        <!-- OOM Adjuster Re-ranking -->
+        <item>activity_manager/use_oom_re_ranking=true</item>
+        <item>activity_manager/oom_re_ranking_number_to_re_rank=16</item>
+        <item>activity_manager/oom_re_ranking_preserve_top_n_apps=8</item>
+    </string-array>
 
     <!-- Whether device has dash charging support -->
     <bool name="config_hasDashCharger">true</bool>
