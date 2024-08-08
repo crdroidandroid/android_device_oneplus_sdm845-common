@@ -16,7 +16,11 @@ ro.lmk.upgrade_pressure=100
 ro.lmk.downgrade_pressure=100
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
-ro.lmk.use_minfree_levels=true
+ro.lmk.psi_partial_stall_ms=125
+ro.lmk.psi_complete_stall_ms=700
+ro.lmk.thrashing_limit=80
+ro.lmk.thrashing_limit_decay=20
+ro.lmk.swap_util_max=100
 
 # Logs
 persist.log.tag.OpenGLRenderer=S
