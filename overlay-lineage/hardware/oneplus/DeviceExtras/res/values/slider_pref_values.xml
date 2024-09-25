@@ -28,6 +28,14 @@
     <integer name="auto_hbm_threshold_preference_interval">500</integer>
     <string name="auto_hbm_threshold_preference_default">7500</string>
 
+    <!-- Adreno Boost integers (default, min, max) -->
+    <integer-array name="gpu_boost_preference_array">
+        <item>0</item>
+        <item>0</item>
+        <item>3</item>
+    </integer-array>
+    <integer name="gpu_boost_preference_interval">1</integer>
+
     <!-- Kcal RED integers (default, min, max) -->
     <integer-array name="kcal_red_preference_array">
         <item>255</item>
