@@ -63,7 +63,6 @@ on late-fs
     write /sys/block/dm-3/queue/read_ahead_kb 128
 
 on property:init.svc.vendor.charger=running
-    setprop persist.sys.usb.config mass_storage
     start vendor.power_off_alarm
 
     # Keep one LITTLE and one big
