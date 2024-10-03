@@ -155,7 +155,7 @@ vendor/lib/camera/fdconfigvideo.bin
 vendor/lib/camera/fdconfigvideolite.bin
 vendor/lib/camera/fsync_db.config
 vendor/lib/camera/titan17x_usecases.bin
-vendor/lib/hw/camera.qcom.so
+vendor/lib/hw/camera.qcom.so|eff98d66faa0f85750b8284b7953433f3c320a13
 vendor/lib/hw/com.qti.chi.override.so
 vendor/lib/libSTDualCamCaptureBokeh.so
 vendor/lib/libSTDualCamPreviewBokeh.so
