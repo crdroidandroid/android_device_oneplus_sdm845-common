@@ -51,9 +51,6 @@
     <!-- Whether device supports Microphone gain -->
     <bool name="config_deviceSupportsMicGain">true</bool>
 
-    <!-- Whether device supports OTG -->
-    <bool name="config_deviceSupportsOTG">false</bool>
-
     <!-- Whether device supports Panel Modes -->
     <bool name="config_deviceSupportsPanelModes">false</bool>
 
@@ -63,8 +60,11 @@
     <!-- Whether device supports TP Edge Limit -->
     <bool name="config_deviceSupportsTPEdgeLimit">false</bool>
 
-    <!-- Whether device supports USB2.0 Force Fastcharge -->
-    <bool name="config_deviceSupportsUSB2FC">false</bool>
+    <!-- Whether device supports USB 2.0 Force Fastcharge (900mA) -->
+    <bool name="config_deviceSupportsUSB2FC">true</bool>
+
+    <!-- Whether device supports USB OTG mode switching -->
+    <bool name="config_deviceSupportsOTG">true</bool>
 
     <!-- Whether device supports System vibration intensity -->
     <bool name="config_deviceSupportsSysVib">true</bool>

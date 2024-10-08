@@ -33,6 +33,12 @@
     <!-- Mic gain sysfs node path -->
     <string name="node_mic_gain_preference">/sys/kernel/sound_control/mic_gain</string>
 
+    <!-- USB 2.0 Force Fastcharge sysfs node path -->
+    <string name="node_usb2_fast_charge_mode_switch">/sys/kernel/fast_charge/force_fast_charge</string>
+
+    <!-- USB OTG sysfs node path -->
+    <string name="otg_mode_switch">/sys/class/power_supply/usb/otg_switch</string>
+
     <!-- Call vibration sysfs node path -->
     <string name="node_vibrator_call_strength_preference">/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds/vibrator/vmax_mv_call</string>
 
