@@ -15,9 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Custom pickup sensor for doze customization -->
-    <string name="pickup_sensor" translatable="false">oneplus.sensor.op_motion_detect</string>
-
     <!-- Minimum interval (in milliseconds) needed to trigger doze pulsing
          on "Pickup up" gesture.
          Default: 2500 milliseconds (2.5 seconds * 1000) -->

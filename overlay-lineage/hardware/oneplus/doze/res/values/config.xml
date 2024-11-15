@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2018-2022 The LineageOS Project
-     Copyright (C) 2024 crDroid Android Project
+     Copyright (C) 2021 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Doze: does the double tap sensor need a proximity check? -->
-    <bool name="doze_double_tap_proximity_check">true</bool>
+    <!-- Sensor types -->
+    <string name="pickup_sensor_type">oneplus.sensor.pickup</string>
+    <string name="pocket_sensor_type">oneplus.sensor.pocket</string>
 </resources>
