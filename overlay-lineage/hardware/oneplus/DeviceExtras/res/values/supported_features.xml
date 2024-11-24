@@ -25,17 +25,11 @@
     <!-- Whether device supports Alert Slider -->
     <bool name="config_deviceSupportsAlertSlider">true</bool>
 
-    <!-- Whether device supports Earpiece gain -->
-    <bool name="config_deviceSupportsEarGain">true</bool>
-
     <!-- Whether device supports FPS overlay -->
     <bool name="config_deviceSupportsFPS">true</bool>
 
     <!-- Whether device supports High Brightness Mode -->
     <bool name="config_deviceSupportsHBM">true</bool>
-
-    <!-- Whether device supports Microphone gain -->
-    <bool name="config_deviceSupportsMicGain">true</bool>
 
     <!-- Whether device supports USB 2.0 Force Fastcharge (900mA) -->
     <bool name="config_deviceSupportsUSB2FC">true</bool>
