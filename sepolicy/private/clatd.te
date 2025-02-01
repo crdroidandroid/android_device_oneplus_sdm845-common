@@ -1,0 +1,1 @@
+dontaudit clatd { shell_data_file shell_test_data_file }:dir { search };

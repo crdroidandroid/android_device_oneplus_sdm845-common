@@ -10,3 +10,5 @@ allow vendor_init tmpfs:chr_file { read open };
 allow vendor_init tmpfs:dir { create_dir_perms mounton };
 
 set_prop(vendor_init, vendor_nfc_prop)
+
+set_prop(vendor_init, vendor_xlat_prop)

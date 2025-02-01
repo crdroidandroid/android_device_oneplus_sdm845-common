@@ -463,3 +463,7 @@ on property:sys.boot_completed=1
 on property:init.svc.statsd=running
     # Stop trying to kill my device after 3 days ugh
     stop statsd
+
+on property:persist.vendor.net.doxlat=false
+    # filthy haxx
+    setprop persist.vendor.net.doxlat true
