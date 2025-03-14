@@ -12,5 +12,11 @@
     "remote": "crdroid-gitlab",
     "repository": "crdroidandroid/proprietary_vendor_oneplus_sdm845-common",
     "target_path": "vendor/oneplus/sdm845-common"
+  },
+  {
+    "remote": "crdroid-gitlab",
+    "repository": "crdroidandroid/proprietary_vendor_oneplus_camera",
+    "target_path": "vendor/oneplus/camera",
+    "branch": "15.0-op6"
   }
 ]
