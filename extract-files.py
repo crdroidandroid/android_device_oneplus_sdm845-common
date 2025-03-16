@@ -58,7 +58,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so')
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
-    'vendor/lib/libVDBlurlessAPI_v2.so': blob_fixup()
+    ('vendor/lib/libVDBlurlessAPI_v2.so', 'vendor/lib/libhalide_hexagon_host.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
         .clear_symbol_version('remote_handle_open'),
