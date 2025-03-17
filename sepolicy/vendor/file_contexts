@@ -1,3 +1,6 @@
+# ADSP modules
+/(vendor|system/vendor)/lib(64)?/rfsa/adsp(/.*)?    u:object_r:same_process_hal_file:s0
+
 # Binaries
 /(vendor|system/vendor)/bin/dashd                   u:object_r:dashd_exec:s0
 /(vendor|system/vendor)/bin/opf-service             u:object_r:opf_exec:s0
@@ -21,12 +24,135 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/reserve2                u:object_r:reserve2_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/spunvm                  u:object_r:efs_boot_dev:s0
 
+# Camera Blobs (from OxygenOS 11.1.2.2 for sdm845)
+/(vendor|system/vendor)/lib(64)?/camera/components/com\.(.*)?\.so    u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.bokeh.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.eis.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.facebeauty.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.preview.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.rtb.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.oneplus.node.snapshot.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.eisv2.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.eisv3.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.hvx.addconstant.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.hvx.binning.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.dummyrtb.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.dummysat.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.eisv2.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.eisv3.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.gpu.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.memcpy.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.remosaic.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.stich.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.node.swregistration.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.aec.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.af.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.afd.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.asd.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.awb.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.awbwrapper.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.pdlib.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.pdlibsony.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qti.stats.pdlibwrapper.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qtistatic.stats.aec.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qtistatic.stats.af.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qtistatic.stats.awb.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.qtistatic.stats.pdlib.so
+#/(vendor|system/vendor)/lib(64)?/camera/components/com.vidhance.stats.aec_dmbr.so
+
+##/(vendor|system/vendor)/lib(64)?/camera/GyroOffset_db.config
+
+/(vendor|system/vendor)/lib(64)?/camera/com\.qti\.sensor\.(.*)?\.so    u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensor.imx371.so
+#/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensor.imx376k.so
+#/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensor.imx519.so
+
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensormodule.liteon_imx371.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensormodule.liteon_imx376k_lc898217xc_actuator.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensormodule.liteon_imx376k_sa3103_actuator.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensormodule.liteon_imx519_lc898217xc_actuator.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.sensormodule.liteon_imx519_sa3103_actuator.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.default.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.oflim_imx371.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.oflim_imx371_fat.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.semco_imx376k.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.semco_imx519.bin
+##/(vendor|system/vendor)/lib(64)?/camera/com.qti.tuned.semco_imx519_fatt.bin
+##/(vendor|system/vendor)/lib(64)?/camera/fdconfigpreview.bin
+##/(vendor|system/vendor)/lib(64)?/camera/fdconfigpreviewlite.bin
+##/(vendor|system/vendor)/lib(64)?/camera/fdconfigvideo.bin
+##/(vendor|system/vendor)/lib(64)?/camera/fdconfigvideolite.bin
+##/(vendor|system/vendor)/lib(64)?/camera/fsync_db.config
+##/(vendor|system/vendor)/lib(64)?/camera/titan17x_usecases.bin
+
+#/(vendor|system/vendor)/lib(64)?/hw/camera.qcom.so
+#/(vendor|system/vendor)/lib(64)?/hw/com.qti.chi.override.so
+
+/(vendor|system/vendor)/lib(64)?/libST(.*)?\.so                  u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libSTDualCamCaptureBokeh.so
+#/(vendor|system/vendor)/lib(64)?/libSTDualCamPreviewBokeh.so
+#/(vendor|system/vendor)/lib(64)?/libSTdisp.so
+/(vendor|system/vendor)/lib(64)?/libSensorManagerHAL\.so         u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libSonyIMX371RmscLibrary\.so    u:object_r:same_process_hal_file:s0
+
+/(vendor|system/vendor)/lib(64)?/libVD(.*)?\.so    u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libVDBlurlessAPI_v2.so
+#/(vendor|system/vendor)/lib(64)?/libVDDualCameraBlurlessAPI.so
+#/(vendor|system/vendor)/lib(64)?/libVDHDRAPI.so
+
+/(vendor|system/vendor)/lib(64)?/lib_EagleEye\.so    u:object_r:same_process_hal_file:s0
+
+/(vendor|system/vendor)/lib(64)?/lib_oneplus(.*)?\.so    u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/lib_oneplus_facebeauty.so
+#/(vendor|system/vendor)/lib(64)?/lib_oneplus_watermark.so
+
+/(vendor|system/vendor)/lib(64)?/libarcsoft_(.*)?\.so    u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_dualcam_bokeh_api.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_dualcam_refocus_left.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_dualcam_refocus_preview.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_dualcam_refocus_right.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_hdr_denoise_api.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_high_dynamic_range.so
+#/(vendor|system/vendor)/lib(64)?/libarcsoft_smart_denoise.so
+
+#/(vendor|system/vendor)/lib(64)?/libblur_halide.so
+/(vendor|system/vendor)/lib(64)?/libc\+\+_extra\.so           u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libcamxfdalgov7.so
+#/(vendor|system/vendor)/lib(64)?/libcamxfdengine.so
+#/(vendor|system/vendor)/lib(64)?/libcamxstatscore.so
+#/(vendor|system/vendor)/lib(64)?/libcamxtintlessalgo.so
+#/(vendor|system/vendor)/lib(64)?/libcom.qti.chinodeutils.so
+/(vendor|system/vendor)/lib(64)?/libcvface_api\.so            u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libhalide_hexagon_host.so
+#/(vendor|system/vendor)/lib(64)?/libmmcamera_faceproc.so
+#/(vendor|system/vendor)/lib(64)?/libmmcamera_faceproc2.so
+/(vendor|system/vendor)/lib(64)?/libmpbase\.so                u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libop_jpeg\.so               u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libopcamera_native_modules.so
+/(vendor|system/vendor)/lib(64)?/libst_relighting\.so         u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libstblur_capture_api\.so    u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libstmobile_hand\.so         u:object_r:same_process_hal_file:s0
+#/(vendor|system/vendor)/lib(64)?/libswregistrationalgo.so
+#/(vendor|system/vendor)/lib(64)?/libvideoutils.so
+#/(vendor|system/vendor)/lib(64)?/libvidhance.so
+
+# Camera Files (from OxygenOS 11.1.2.2 for sdm845)
+/data/vendor/camera_update(/.*)?                     u:object_r:vendor_camera_update_data_file:s0
+/mnt/vendor/persist/camera(/.*)?                     u:object_r:vendor_persist_camera_file:s0
+/mnt/vendor/persist/dual_camera_calibration(/.*)?    u:object_r:vendor_persist_camera_file:s0
+
+# CDSP
+/(vendor|system/vendor)/lib(64)?/libmdsprpc\.so    u:object_r:same_process_hal_file:s0
+
 # Devices
-/dev/dash                 u:object_r:dash_device:s0
-/dev/goodix_fp            u:object_r:fingerprintd_device:s0
-/dev/opfeature            u:object_r:opf_file:s0
-/dev/p73                  u:object_r:nfc_device:s0
-/dev/pn553                u:object_r:nfc_device:s0
+/dev/dash         u:object_r:dash_device:s0
+/dev/goodix_fp    u:object_r:fingerprintd_device:s0
+/dev/opfeature    u:object_r:opf_file:s0
+/dev/p73          u:object_r:nfc_device:s0
+/dev/pn553        u:object_r:nfc_device:s0
+
+# Graphics
+/(vendor|system/vendor)/lib(64)?/android\.hardware\.graphics\.allocator@[2-4]\.0\.so    u:object_r:same_process_hal_file:s0
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.oneplus    u:object_r:hal_fingerprint_default_exec:s0

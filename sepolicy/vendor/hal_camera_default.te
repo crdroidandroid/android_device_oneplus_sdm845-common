@@ -1,4 +1,15 @@
+hal_client_domain(hal_camera_default, vendor_hal_qspmhal)
 hal_client_domain(hal_camera_default, hal_cameraHIDL)
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+
+binder_call(hal_camera, system_server)
+
+allow hal_camera_default hal_graphics_allocator_service:service_manager find;
+
+allow hal_camera_default cgroup:file rw_file_perms;
+
+allow hal_camera_default input_device:dir r_dir_perms;
+allow hal_camera_default input_device:chr_file r_file_perms;
 
 allow hal_camera_default mnt_vendor_file:dir w_dir_perms;
 allow hal_camera_default mnt_vendor_file:file create_file_perms;
@@ -9,12 +20,22 @@ allow hal_camera_default oem_file:file create_file_perms;
 allow hal_camera_default persist_file:dir w_dir_perms;
 allow hal_camera_default persist_file:file create_file_perms;
 
-allow hal_camera_default input_device:dir r_dir_perms;
-allow hal_camera_default input_device:chr_file r_file_perms;
+allow hal_camera_default proc:file rw_file_perms;
+allow hal_camera_default proc_meminfo:file r_file_perms;
+
+#allow hal_camera_default self:tcp_socket create;
+
+allow hal_camera_default sysfs_net:dir search;
+allow hal_camera_default sysfs_net:file { open read };
+
+#allow hal_camera_default system_file:file { execute execute_no_trans getattr open read };
+
+allow hal_camera_default vendor_data_file:file rw_file_perms;
 
 allow hal_camera_default xdsp_device:chr_file r_file_perms;
 
-allow hal_camera_default proc_meminfo:file r_file_perms;
-
 get_prop(hal_camera_default, ctl_default_prop)
 get_prop(hal_camera_default, vendor_mmi_prop)
+
+dontaudit hal_camera_default self:tcp_socket create;
+dontaudit hal_camera_default default_prop:file { getattr read };

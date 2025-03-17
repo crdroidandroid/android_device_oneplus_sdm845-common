@@ -1,3 +1,4 @@
+allow system_server hal_camera_default:fifo_file write;
 allow system_server proc_stat:file { read };
 allow system_server proc_touchpanel:dir { search };
 allow system_server sysfs_tri_state_key:file rw_file_perms;

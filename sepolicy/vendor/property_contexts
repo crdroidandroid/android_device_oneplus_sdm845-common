@@ -1,6 +1,19 @@
 # Bluetooth
 persist.vendor.bluetooth.    u:object_r:vendor_bluetooth_prop:s0
 
+# Camera (from OOS 11.1.2.2 - replace "vendor_camera_prop" with QCOM legacy-um/legacy/ "camera_prop")
+camera.OPpictureId                  u:object_r:camera_prop:s0
+camera.motion_detect                u:object_r:camera_prop:s0
+camera.motion_sq_detect             u:object_r:camera_prop:s0
+camera.on                           u:object_r:camera_prop:s0
+persist.camera.crop.enable          u:object_r:camera_prop:s0
+persist.camera.dualcam.mode         u:object_r:camera_prop:s0
+persist.camera.oneplusEisPreview    u:object_r:camera_prop:s0
+persist.camera.param.orientation    u:object_r:camera_prop:s0
+persist.camera.privapp.list         u:object_r:camera_prop:s0
+persist.camera.videomode            u:object_r:camera_prop:s0
+persist.camera.videousecase         u:object_r:camera_prop:s0
+
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0
 ro.nfc.port            u:object_r:vendor_nfc_prop:s0

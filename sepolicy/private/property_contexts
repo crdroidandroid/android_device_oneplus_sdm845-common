@@ -2,3 +2,63 @@ gf.debug.dump_data    u:object_r:ctl_default_prop:s0
 
 # Boot Animation
 persist.sys.bootanim.play_sound    u:object_r:bootanim_system_prop:s0
+
+# Camera
+persist.camera.         u:object_r:ctl_default_prop:s0
+camera.                 u:object_r:ctl_default_prop:s0
+ro.camera.              u:object_r:ctl_default_prop:s0
+vendor.debug.camera.    u:object_r:ctl_default_prop:s0
+
+## from OxygenOS 11.1.2.2
+# v-takey.zheng@SYSTEM, 2020/05/27, add for camera OPTODO-30
+#persist.camera.antibanding.debug                         u:object_r:ctl_default_prop:s0
+#persist.camera.ashdr.debug                               u:object_r:ctl_default_prop:s0
+#persist.camera.asllhdr.debug                             u:object_r:ctl_default_prop:s0
+#persist.camera.bokeh.debugcap                            u:object_r:ctl_default_prop:s0
+#persist.camera.cfr.disable                               u:object_r:ctl_default_prop:s0
+#persist.camera.exif3a.decompress                         u:object_r:ctl_default_prop:s0
+#persist.camera.mfsrfrt.debug                             u:object_r:ctl_default_prop:s0
+#persist.camera.opxfilter.dumpframe                       u:object_r:ctl_default_prop:s0
+#persist.camera.singleblur.debug                          u:object_r:ctl_default_prop:s0
+#persist.camera.superportrait.debug                       u:object_r:ctl_default_prop:s0
+#persist.camera.supersensor.debug                         u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.debugdata.enable3A                 u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.debugdata.enableTuningMetadata     u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.dump.formatmask                    u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.dumpDebugDataEveryProcessResult    u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.dumpSensorEEPROMData               u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.exif3a.opxcompress                 u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.logEntryExitMask                   u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.logInfoMask                        u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.logVerboseMask                     u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.logWarningMask                     u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.overrideLogLevels                  u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.pdaf_dump                          u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.pdaf_logging                       u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.reprocessDump                      u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.sceneclassify.enable               u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.swmf.debug                         u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.systemLogEnable                    u:object_r:ctl_default_prop:s0
+#persist.vendor.camera.traceGroupsEnable                  u:object_r:ctl_default_prop:s0
+#persist.vendor.facebeauty.dump                           u:object_r:ctl_default_prop:s0
+#persist.vendor.oppo.rawhdr.dump                          u:object_r:ctl_default_prop:s0
+#persist.vendor.supernight.dump                           u:object_r:ctl_default_prop:s0
+#vendor.debug.camera.af.fullsweep                         u:object_r:ctl_default_prop:s0
+#
+# robert.zhang@IMAGE, 2020/12/04, add for camera prop
+#persist.camera.OverrideLogLevels    u:object_r:ctl_default_prop:s0
+#persist.camera.assert.panic         u:object_r:ctl_default_prop:s0
+#persist.camera.draw.aec.info        u:object_r:ctl_default_prop:s0
+#persist.camera.draw.roi             u:object_r:ctl_default_prop:s0
+#persist.camera.logInfoMask          u:object_r:ctl_default_prop:s0
+#persist.camera.logVerboseMask       u:object_r:ctl_default_prop:s0
+#persist.camera.logWarningMask       u:object_r:ctl_default_prop:s0
+#persist.camera.set.nodetype         u:object_r:ctl_default_prop:s0
+persist.ife.debug                   u:object_r:ctl_default_prop:s0
+persist.sys.assert.panic            u:object_r:exported_system_prop:s0
+persist.sys.log.ae                  u:object_r:ctl_default_prop:s0
+persist.sys.log.af                  u:object_r:ctl_default_prop:s0
+persist.sys.log.awb                 u:object_r:ctl_default_prop:s0
+persist.sys.log.debugexif           u:object_r:ctl_default_prop:s0
+#ro.camera.req.fmq.size              u:object_r:ctl_default_prop:s0
+#ro.camera.res.fmq.size              u:object_r:ctl_default_prop:s0

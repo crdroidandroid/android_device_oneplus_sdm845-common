@@ -1,4 +1,8 @@
-# files
+# Camera
+type vendor_camera_update_data_file, file_type, data_file_type;
+type vendor_persist_camera_file, file_type;
+
+# OnePlus files
 type oem_file, file_type;
 type op1_file, file_type;
 type op2_file, file_type;
