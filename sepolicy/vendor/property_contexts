@@ -1,6 +1,9 @@
 # Bluetooth
 persist.vendor.bluetooth.    u:object_r:vendor_bluetooth_prop:s0
 
+# Camera
+persist.vendor.camera.    u:object_r:vendor_persist_camera_prop:s0
+
 # Camera (from OOS 11.1.2.2 - replace "vendor_camera_prop" with QCOM legacy-um/legacy/ "camera_prop")
 camera.OPpictureId                  u:object_r:camera_prop:s0
 camera.motion_detect                u:object_r:camera_prop:s0
