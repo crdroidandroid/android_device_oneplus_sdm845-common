@@ -27,6 +27,16 @@
          is no longer indicative, and a separate config now exists for each band -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
 
+    <!-- Indicates whether to enable overriding the max number of spatial stream supported by the device
+         If true, config_wifiFrameworkMaxNumSpatialStreamDeviceOverrideValue
+         will be used to override the max number of spatial stream supported by the device.
+         If false, it will be left to WifiCond to derive the value from NL80211 interface -->
+    <bool translatable="false" name="config_wifiFrameworkMaxNumSpatialStreamDeviceOverrideEnable">false</bool>
+    <integer translatable="false" name="config_wifiFrameworkMaxNumSpatialStreamDeviceOverrideValue"></integer>
+
+    <!-- Boolean indicating whether 802.11r Fast BSS Transition is enabled on this platform -->
+    <bool translatable="false" name="config_wifi_fast_bss_transition_enabled">true</bool>
+
     <!-- Boolean indicating whether the wifi chipset supports background scanning mechanism.
          This mechanism allows the host to remain in suspend state and the dongle to actively
          scan and wake the host when a configured SSID is detected by the dongle. This chipset
@@ -36,7 +46,7 @@
     <!-- Integer indicating maximum hardware supported client number of soft ap -->
     <integer translatable="false" name="config_wifiHardwareSoftapMaxClientCount">32</integer>
 
-    <!-- Boolean indicating that wifi only link configuratios that have exact same credentials (i.e PSK) -->
+    <!-- Boolean indicating that wifi only link configurations that have exact same credentials (i.e PSK) -->
     <bool translatable="false" name="config_wifi_only_link_same_credential_configurations">false</bool>
 
     <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
@@ -49,7 +59,7 @@
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
     <!-- Wifi driver supports 6GHz band for softap -->
-    <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
+    <bool translatable="false" name="config_wifiSoftap6ghzSupported">false</bool>
 
     <!-- Indicates that connected MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
@@ -88,9 +98,49 @@
     <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_5GHz">-57</integer>
     <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_24GHz">-60</integer>
 
+    <!-- boolean indicating whether or not to ask for user approval before switching away from a user-selected network -->
+    <bool translatable="false" name="config_wifiAskUserBeforeSwitchingFromUserSelectedNetwork">true</bool>
+
+    <!--
+    Controls the mapping between RSSI and RSSI levels.
+
+    RSSI                                    RSSI Level
+    (-infinity, thresholds[0])                       0
+    [threshold[0], threshold[1])                     1
+    [threshold[1], threshold[2])                     2
+    ...                                            ...
+    [threshold[len-2], threshold[len-1])         len-1
+    [threshold[len-1], +infinity)                  len
+
+    where:
+        [a, b) is the range of integers `n` such that a <= n < b
+        `threshold[i]` represents the i'th element of the config_wifiRssiLevelThresholds array
+        and `len` is the length of the config_wifiRssiLevelThresholds array.
+    -->
+    <integer-array translatable="false" name="config_wifiRssiLevelThresholds">
+                         <!-- RSSI                RSSI Level -->
+        <item>-90</item> <!-- (-infinity, -88)             0 -->
+        <item>-80</item> <!-- [-88, -77)                   1 -->
+        <item>-70</item> <!-- [-77, -66)                   2 -->
+        <item>-60</item> <!-- [-66, -55)                   3 -->
+                         <!-- [-55, +infinity)             4 -->
+    </integer-array>
+
     <!-- Boolean indicating whether the device should remain connected to a network without DHCP.
         If true, the IpClient provisioning timeout will be set to infinite, which means that the
         connection will not be torn down if the DHCP server does not respond. As a result the device
         will be discoverable and reachable via the local-only IPv6 address. -->
     <bool translatable="false" name ="config_wifiRemainConnectedAfterIpProvisionTimeout">true</bool>
+
+    <!-- Boolean indicating whether Target Wake Time (TWT) feature is supported or not. This flag
+         overrides the device's TWT capability if set to false. If the device supports TWT and this
+         overlay parameter is set to false, the application cannot set up a TWT session. Also, the
+         API WifiManager#getTwtCapabilities returns TWT unsupported even if the device is capable
+         of setting up TWT session.
+    -->
+    <bool translatable="false" name="config_wifiTwtSupported">false</bool>
+
+    <!-- Boolean indicating whether to use the common nl80211 implementation of the WiFi Hal. This
+         will be used instead of the AIDL or HIDL implementation if enabled. -->
+    <bool translatable="false" name="config_wifiNl80211HalEnabled">false</bool>
 </resources>
