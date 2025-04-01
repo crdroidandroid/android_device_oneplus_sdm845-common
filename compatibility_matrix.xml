@@ -42,6 +42,18 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.radio.ims</name>
+        <fqname>IRadioIms/slot1</fqname>
+        <fqname>IRadioIms/slot2</fqname>
+    </hal>
     <hal format="hidl" optional="false">
         <name>android.hidl.allocator</name>
         <version>1.0</version>
