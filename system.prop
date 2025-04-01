@@ -1,6 +1,9 @@
 # AB Update
 ro.build.ab_update=true
 
+# Boot Animation
+persist.sys.bootanim.play_sound=true
+
 # BPF
 ro.kernel.ebpf.supported=true
 
