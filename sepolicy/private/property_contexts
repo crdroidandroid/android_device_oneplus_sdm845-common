@@ -1,1 +1,4 @@
 gf.debug.dump_data    u:object_r:ctl_default_prop:s0
+
+# Boot Animation
+persist.sys.bootanim.play_sound    u:object_r:bootanim_system_prop:s0

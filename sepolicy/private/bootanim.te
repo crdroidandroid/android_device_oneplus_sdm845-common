@@ -1,0 +1,1 @@
+allow bootanim audio_service:service_manager find;
