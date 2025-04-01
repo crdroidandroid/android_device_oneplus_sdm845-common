@@ -1,0 +1,5 @@
+/oem/media/bootanimation-dark.zip                         u:object_r:bootanim_oem_file:s0
+/(product|system/product)/media/bootanimation.zip         u:object_r:bootanim_oem_file:s0
+/(product|system/product)/media/bootanimation-dark.zip    u:object_r:bootanim_oem_file:s0
+/(product|system/product)/media/shutdownanimation.zip     u:object_r:bootanim_oem_file:s0
+/(product|system/product)/media/userspace-reboot.zip      u:object_r:bootanim_oem_file:s0
