@@ -7,6 +7,9 @@ audio.sys.noisy.broadcast.delay=500
 audio.sys.offload.pstimeout.secs=3
 ro.af.client_heap_size_kbyte=7168
 
+# Display
+vendor.display.disable_rounded_corner=0
+
 # LMKD
 ## use the new psi monitors instead of old vmpressure
 ro.lmk.use_psi=true

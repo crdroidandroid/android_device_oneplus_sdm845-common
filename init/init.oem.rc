@@ -355,11 +355,6 @@ on boot
 #add for n200
     write /sys/devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0/tp_fw_update 0
 
-#ifdef VENDOR_EDIT
-#niku.huang@SYSTEM, 2020/12/30, Add for enable round corner
-    setprop vendor.display.disable_rounded_corner 0
-#endif /*VENDOR_EDIT*/
-
 on init
     setprop vendor.boot.verifiedbootstate ${ro.boot.verifiedbootstate}
     setprop vendor.boot.hw_version ${ro.boot.hw_version}
