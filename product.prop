@@ -6,3 +6,17 @@ audio.offload.video=true
 audio.sys.noisy.broadcast.delay=500
 audio.sys.offload.pstimeout.secs=3
 ro.af.client_heap_size_kbyte=7168
+
+# LMKD
+## use the new psi monitors instead of old vmpressure
+ro.lmk.use_psi=true
+## be smart
+ro.lmk.kill_heaviest_task=true
+## used for testing
+# ro.lmk.debug=true
+## match activitymanager low swap threshold - prolly good to have userspace all on the same ... page :D
+ro.lmk.swap_free_low_percentage=5
+## yes we're a high-performance device still I guess
+ro.lmk.psi_partial_stall_ms=70
+## real world ratio seems to average over 4, trying 0 resulted in lmkd just not really doing anything and then oom_reaper jumped in
+ro.lmk.swap_compression_ratio=4
