@@ -40,19 +40,6 @@
       ]
     },
     {
-      "Name": "ServicePerformance",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "schedtune",
-            "Path": "background"
-          }
-        }
-      ]
-    },
-    {
       "Name": "HighPerformance",
       "Actions": [
         {
@@ -61,6 +48,19 @@
           {
             "Controller": "schedtune",
             "Path": "foreground"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "ServicePerformance",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "schedtune",
+            "Path": "background"
           }
         }
       ]
@@ -152,32 +152,6 @@
           {
             "Name": "STunePreferIdle",
             "Value": "0"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SFMainPolicy",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpuset",
-            "Path": "system-background"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "SFRenderEnginePolicy",
-      "Actions": [
-        {
-          "Name": "JoinCgroup",
-          "Params":
-          {
-            "Controller": "cpuset",
-            "Path": "system-background"
           }
         }
       ]
