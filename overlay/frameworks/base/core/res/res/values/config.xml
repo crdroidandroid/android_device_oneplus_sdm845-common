@@ -218,6 +218,12 @@
     -->
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
 
+    <!-- User activity timeout: Screen timeout override in milliseconds.
+         This value must be greater than 0, otherwise the invalid value will not apply to
+         the screen timeout override policy.
+     -->
+    <integer name="config_screenTimeoutOverride">10000</integer>
+
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
