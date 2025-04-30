@@ -1,4 +1,8 @@
-allow vendor_init tmpfs:chr_file { read open };
-allow vendor_init tmpfs:dir { create_dir_perms mounton };
+allow vendor_init proc_extra_free_kbytes:file { write };
 
 allow vendor_init op2_file:file create_file_perms;
+
+allow vendor_init proc_watermark_scale_factor:file { write };
+
+allow vendor_init tmpfs:chr_file { read open };
+allow vendor_init tmpfs:dir { create_dir_perms mounton };
