@@ -16,6 +16,7 @@ persist.camera.param.orientation    u:object_r:camera_prop:s0
 persist.camera.privapp.list         u:object_r:camera_prop:s0
 persist.camera.videomode            u:object_r:camera_prop:s0
 persist.camera.videousecase         u:object_r:camera_prop:s0
+ro.vendor.camera.                   u:object_r:camera_prop:s0
 
 # NFC
 persist.vendor.nfc.    u:object_r:vendor_nfc_prop:s0
