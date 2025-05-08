@@ -630,11 +630,6 @@ service service_wifi_txEnable  /vendor/bin/sh /vendor/bin/wifi_txEnable
     oneshot
 
 on init
-    mkdir /dev/op_cgroup 0750 root system
-    mount tmpfs none /dev/op_cgroup mode=0750,uid=0,gid=1000
-    mkdir /dev/op_cgroup/freezer 0750 root system
-    mount cgroup none /dev/op_cgroup/freezer  freezer
-    chmod 777 /dev/op_cgroup/freezer
 #ifdef VENDOR_EDIT
     setprop persist.vendor.mdm_helper.fail_action cold_reset,s3_reset,panic
 #endif
