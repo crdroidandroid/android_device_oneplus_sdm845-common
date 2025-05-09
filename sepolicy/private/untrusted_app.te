@@ -1,0 +1,1 @@
+dontaudit untrusted_app self:netlink_route_socket { nlmsg_readpriv };
