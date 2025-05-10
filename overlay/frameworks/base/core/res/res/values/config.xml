@@ -390,6 +390,9 @@
     <!-- Default value for performant auth feature. -->
     <bool name="config_performantAuthDefault">true</bool>
 
+    <!-- The size of the UI tier if cached app oom_adj_score tiers are enabled. -->
+    <integer name="config_am_tieredCachedAdjUiTierSize">5</integer>
+
 <!--
      Copyright (C) 2016-2025, crDroid Android Project
 -->
@@ -416,5 +419,17 @@
     <string-array name="device_configs_override" translatable="false">
         <!-- ART heap compaction for cached apps -->
         <item>activity_manager/use_compaction=true</item>
+        <!-- Set Max Cached Processes - Sorry Pranav, I know you're overriding it, but I'm still going to protest because AOSP tuning is stupid -->
+        <item>activity_manager/max_cached_processes=1024</item>
+        <!-- This is the amount of time we allow an app to settle after it goes into the background, before we start restricting what it can do. -->
+        <item>activity_manager/background_settle_time=300000</item>
+        <!-- Enables proactive killing of cached apps -->
+        <item>activity_manager/proactive_kills_enabled=true</item>
+        <!-- Trim LRU cached app when swap falls below this minimum percentage. -->
+        <item>activity_manager/low_swap_threshold_percent=0.05f</item>
+        <!-- OOM Adjuster Re-ranking -->
+        <item>activity_manager/use_oom_re_ranking=true</item>
+        <item>activity_manager/oom_re_ranking_number_to_re_rank=5</item>
+        <item>activity_manager/oom_re_ranking_preserve_top_n_apps=16</item>
     </string-array>
 </resources>
