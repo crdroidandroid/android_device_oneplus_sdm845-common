@@ -168,6 +168,10 @@ PRODUCT_PACKAGES_DEBUG += \
 $(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Camera
+$(call soong_config_set,camera,needs_client_info_lib,true)
+$(call soong_config_set,camera,override_format_from_reserved,true)
+$(call soong_config_set,camera,package_name,com.oneplus.camera)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
