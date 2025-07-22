@@ -37,6 +37,22 @@
     </integer-array>
     <integer name="gpu_boost_preference_interval">1</integer>
 
+    <!-- Adreno max frequency integers (default, min, max) -->
+    <integer-array name="gpu_maxfreq_preference_array">
+        <item>590000000</item>
+        <item>520000000</item>
+        <item>800000000</item>
+    </integer-array>
+    <integer name="gpu_maxfreq_preference_interval">35000000</integer>
+
+    <!-- CPU big max freq integers (default, min, max) -->
+    <integer-array name="cpu_bigmaxfreq_preference_array">
+        <item>2630400</item>
+        <item>2400000</item>
+        <item>2707200</item>
+    </integer-array>
+    <integer name="cpu_bigmaxfreq_preference_interval">76800</integer>
+
     <!-- Kcal RED integers (default, min, max) -->
     <integer-array name="kcal_red_preference_array">
         <item>255</item>

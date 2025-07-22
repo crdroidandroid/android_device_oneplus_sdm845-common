@@ -19,8 +19,14 @@
 <!-- These resources are around just to allow their values to be customized
      for different OnePlus serires/devices.  Do not translate. -->
 <resources>
+    <!-- Whether device supports CPU big cluster max frequency limiting -->
+    <bool name="config_deviceSupportsCPUBigMaxFreq">true</bool>
+
     <!-- Whether device supports Adreno Boost -->
     <bool name="config_deviceSupportsGPUBoost">true</bool>
+
+    <!-- Whether device supports Adreno GPU max frequency limiting -->
+    <bool name="config_deviceSupportsGPUMaxFreq">true</bool>
 
     <!-- Whether device supports Alert Slider -->
     <bool name="config_deviceSupportsAlertSlider">true</bool>
